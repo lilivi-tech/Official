@@ -1,0 +1,85 @@
+name: Deploy AstroWind
+
+on:
+  push:
+    branches: [ "main" ]        # push 到 main 自动部署
+  pull_request:
+    branches: [ "main" ]        # PR 只跑构建与检查，不部署
+  workflow_dispatch:            # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js (LTS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      # 可选：上传构建产物，供部署 job 复用
+      - name: Upload dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  # 额外静态检查（保留你的 check 思路）
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+
+  deploy:
+    # 仅在 push 到 main 时部署；PR 或手动触发都不部署
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [build]               # 等 build 成功
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download dist
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      # 可选：写一个部署标记文件，方便上线后直观看到版本
+      - name: Write deploy marker
+        run: |
+          echo "commit: $GITHUB_SHA"        >  dist/deploy.txt
+          echo "time:   $(date -u)"        >>  dist/deploy.txt
+          echo "branch: $GITHUB_REF_NAME"  >>  dist/deploy.txt
+
+      - name: Prepare SSH key
+        run: |
+          echo "${{ secrets.SSH_KEY }}" > key.pem
+          chmod 600 key.pem
+
+      - name: Rsync dist to 1Panel site root
+        env:
+          SSH_HOST:    ${{ secrets.SSH_HOST }}
+          SSH_PORT:    ${{ secrets.SSH_PORT }}
+          SSH_USER:    ${{ secrets.SSH_USER }}
+          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}   # 例如：/opt/1panel/www/sites/lilivi.com/index
+        run: |
+          rsync -az --delete -e "ssh -i key.pem -p $SSH_PORT -o StrictHostKeyChecking=no" \
+            dist/ $SSH_USER@$SSH_HOST:$REMOTE_PATH/
+
+      # 可选：简单冒烟测试（你的域名需要已在 1Panel 配好）
+      - name: Smoke check
+        if: always()
+        run: |
+          URL="https://${{ secrets.SITE_URL || 'lilivi.com' }}"
+          curl -I --max-time 20 "$URL" | tee /dev/stderr | grep -E "HTTP/.* (200|301|308)"
+
