@@ -11,9 +11,12 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Lilivi — 用科技，点亮生活的温度',
+  description:
+    'Lilivi 致力于用 AI 与游戏的力量，让科技更具人文温度，让创造力回归生活。AI × Game × Creativity',
   ignoreTitleTemplate: true,
 };
 ---
@@ -23,79 +26,65 @@ const metadata = {
 
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
+      { text: '探索产品', href: '/products', class: 'btn-glass' },
+      { text: '立即体验', href: '/products/play', variant: 'primary' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Lilivi Hero Image' }}
   >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lilivi-gradient"></div>
+    </Fragment>
+
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      用科技，点亮生活的温度。
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="hidden sm:inline">AI × Game × Creativity</span>
+      <span class="block">让创造力回归生活，让科技更具人文温度。</span>
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note title="品牌理念" description="简洁 · 最佳实践 · 高性能 · 有温度的科技" />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    tagline="特性"
+    title="Lilivi 的核心优势"
+    subtitle="AI × Game × Creativity：轻盈、快速、可自定义，打造有温度的体验。"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+        title: 'Astro + Tailwind 一体化',
+        description: '现代静态/混合站点与原子化样式的高效组合，性能与效率兼得。',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+        title: '即取即用的组件',
+        description: '覆盖 Hero、功能、价格、页脚等常用模块，按需组合快速搭建。',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+        title: '最佳实践与可维护性',
+        description: '良好结构与 SEO/可访问性实践，保障长期可迭代。',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+        title: '卓越的加载速度',
+        description: '默认即高分的性能体验，助力更好的搜索与转化。',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+        title: 'SEO 友好',
+        description: '内置元数据与 OG 图优化，助力内容触达更多受众。',
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        title: '开放与协作',
+        description: '欢迎新想法与贡献，持续共创更好的产品体验。',
         icon: 'tabler:bulb',
       },
     ]}
@@ -105,8 +94,8 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="产品内核"
+    title="有温度的技术蓝图"
     items={[
       {
         title: 'Built on top of Astro 5.0',
@@ -130,8 +119,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">建立在现代化基础之上</h3>
+      采用行业领先实践，获得持久的竞争优势
     </Fragment>
 
     <Fragment slot="bg">
@@ -169,7 +158,7 @@ const metadata = {
       alt: 'Blueprint Image',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">让你的在线形象真正体现品牌气质。</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -207,7 +196,7 @@ const metadata = {
       alt: 'Astronauts Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">为增长与成功而设计。</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -217,28 +206,25 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="用 Lilivi 快速搭建你的理想网站"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        title: '步骤 1：<span class="font-medium">获取模板</span>',
+        description: '从 GitHub 获取或使用模板，一键开始你的创意画布。',
         icon: 'tabler:package',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        title: '步骤 2：<span class="font-medium">添加内容</span>',
+        description: '填充图片与文案，让你的故事鲜活起来。',
         icon: 'tabler:letter-case',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        title: '步骤 3：<span class="font-medium">自定义样式</span>',
+        description: '调整颜色、字体与布局，注入你的品牌气质。',
         icon: 'tabler:paint',
       },
       {
-        title: 'Ready!',
+        title: '完成！',
         icon: 'tabler:check',
       },
     ]}
@@ -251,58 +237,53 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="常用组件"
+    subtitle="覆盖大多数官网/产品站点搭建需求"
+    tagline="组件库"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: '页头',
+        description: '导航清晰即方向明确。',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        title: '主视觉',
+        description: '第一印象决定心智锚点。',
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        title: '功能',
+        description: '清晰传达产品价值与能力。',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        title: '内容',
+        description: '内容即王道，承载价值表达。',
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        title: '行动召唤',
+        description: '引导用户完成关键动作，提升转化。',
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        title: '价格',
+        description: '清晰方案与权益，降低决策成本。',
         icon: 'flat-color-icons:currency-exchange',
       },
       {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        title: '证言',
+        description: '社会认同，建立信任与说服力。',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        title: '联系',
+        description: '多通道触达与反馈，建立连接。',
         icon: 'flat-color-icons:business-contact',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        title: '页脚',
+        description: '极简而有用的收尾与导航。',
         icon: 'flat-color-icons:database',
       },
     ]}
@@ -315,51 +296,25 @@ const metadata = {
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    title="阅读我们的最新文章"
+    information={`分享关于 AI、游戏与创造力的思考与实践，
+                        关注产品更新、设计理念与技术实现，为你带来灵感与方法。
                 `}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="常见问题"
+    subtitle="了解 Lilivi 的能力与使用方式，快速找到你关心的问题答案。"
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
+      { title: '为什么选择 Lilivi？', description: '我们将 AI 与游戏的创造力结合，以温暖的方式服务真实场景。' },
+      { title: '如何开始？', description: '访问产品页选择 Play 或 Studio，按照指引体验与上手。' },
+      { title: '是否支持移动端？', description: '默认支持响应式布局，在主流设备上均可获得良好体验。' },
+      { title: '是否支持暗色主题？', description: '支持，右上角可切换主题。' },
+      { title: '如何获取内测资格？', description: '可通过联系我们或关注博客公告获取最新信息。' },
     ]}
   />
 
@@ -367,10 +322,57 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: '下载', amount: '132K' },
+      { title: '关注', amount: '24.8K' },
+      { title: '复刻', amount: '10.3K' },
+      { title: '用户', amount: '48.4K' },
+    ]}
+  />
+
+  <!-- Pricing Widget *************** -->
+  <Pricing
+    title="价格方案"
+    subtitle="灵活选择，立即开启你的创意之旅"
+    tagline="Pricing"
+    prices={[
+      {
+        title: '免费',
+        subtitle: '适合个人试用',
+        price: '0',
+        period: '/月',
+        items: [
+          { description: '基础功能与模板' },
+          { description: '社区支持' },
+          { description: '个人非商业用途' },
+        ],
+        callToAction: { text: '开始使用', href: '/products' },
+      },
+      {
+        title: '专业',
+        subtitle: '适合创作者/小团队',
+        price: '19',
+        period: '/月',
+        items: [
+          { description: '解锁高级组件与主题' },
+          { description: '优先邮件支持' },
+          { description: '商业使用授权' },
+        ],
+        callToAction: { text: '立即体验', href: '/products/play' },
+        hasRibbon: true,
+        ribbonTitle: '推荐',
+      },
+      {
+        title: '团队',
+        subtitle: '适合企业团队',
+        price: '99',
+        period: '/月',
+        items: [
+          { description: '团队协作与权限' },
+          { description: '优先级技术支持' },
+          { description: '定制化方案咨询' },
+        ],
+        callToAction: { text: '联系我们', href: '/contact' },
+      },
     ]}
   />
 
@@ -378,22 +380,15 @@ const metadata = {
 
   <CallToAction
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
+      { variant: 'primary', text: '开启你的创意之旅', href: '/products', icon: 'tabler:rocket' },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      AI × Game × Creativity
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      科技应当温柔，而非冰冷。现在就开始，点亮生活的温度。
     </Fragment>
   </CallToAction>
 </Layout>

@@ -1,0 +1,20 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Studio - Lilivi',
+  description: 'Lilivi Studio：创意 AI 工具',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 max-w-4xl">
+    <h1 class="text-4xl font-heading font-bold mb-4">Studio</h1>
+    <p class="text-muted">用 AI 放大创造力，快速从灵感到成品。</p>
+    <div class="mt-8 rounded-xl p-8 border border-primary/30 bg-white/40 dark:bg-slate-900/40 backdrop-blur">
+      <h2 class="text-2xl font-bold mb-2">正在研发</h2>
+      <p class="opacity-80">欢迎关注更新或联系我们获取内测信息。</p>
+    </div>
+  </section>
+</PageLayout>
+

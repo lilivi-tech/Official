@@ -19,10 +19,13 @@ import type { MetaData as MetaDataType } from '~/types';
 
 export interface Props {
   metadata?: MetaDataType;
+  lang?: string;
+  dir?: string;
 }
 
-const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
+const { metadata = {}, lang, dir } = Astro.props;
+const language = lang || I18N.language;
+const textDirection = dir || I18N.textDirection;
 ---
 
 <!doctype html>

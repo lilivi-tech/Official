@@ -35,6 +35,8 @@ export interface Post {
 
   /**  */
   draft?: boolean;
+  /** Language code of post */
+  lang?: string;
 
   /**  */
   Content?: AstroComponentFactory;

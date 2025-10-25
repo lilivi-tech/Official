@@ -10,22 +10,23 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  lang?: string;
+  headerOverride?: typeof headerData;
+  footerOverride?: typeof footerData;
 }
 
-const { metadata } = Astro.props;
+const { metadata, lang, headerOverride, footerOverride } = Astro.props;
 ---
 
-<Layout metadata={metadata}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
+<Layout metadata={metadata} lang={lang}>
+  <slot name="announcement" />
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...(headerOverride || headerData)} isSticky showToggleTheme showLanguageSwitch />
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...footerData} />
+    <Footer {...(footerOverride || footerData)} />
   </slot>
 </Layout>

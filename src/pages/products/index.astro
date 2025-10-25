@@ -1,0 +1,27 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '产品 - Lilivi',
+  description: 'Lilivi 产品：Play 与 Studio，AI × Game × Creativity',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 max-w-5xl">
+    <h1 class="text-4xl font-heading font-bold mb-6">产品</h1>
+    <p class="text-muted mb-8">探索 Lilivi 的两大核心产品：即开即玩的 Play 与面向创意的 Studio。</p>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      <a href="/products/play" class="block rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-primary transition">
+        <h2 class="text-2xl font-bold mb-2">Play</h2>
+        <p class="text-muted">即开即玩，支持 AI 对手与人机互动。</p>
+      </a>
+      <a href="/products/studio" class="block rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-primary transition">
+        <h2 class="text-2xl font-bold mb-2">Studio</h2>
+        <p class="text-muted">创意 AI 工具，让灵感与生产力快速落地。</p>
+      </a>
+    </div>
+  </section>
+</PageLayout>
+

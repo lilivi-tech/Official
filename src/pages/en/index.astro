@@ -1,0 +1,79 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
+
+const metadata = {
+  title: 'Lilivi — Light up life with technology',
+  description: 'AI × Game × Creativity. Make technology warm and human-centered.',
+};
+---
+
+<PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
+  <Hero
+    actions={[
+      { text: 'Explore', href: '/en/products', class: 'btn-glass' },
+      { text: 'Try Now', href: '/en/products/play', variant: 'primary' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Lilivi Hero Image' }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lilivi-gradient"></div>
+    </Fragment>
+    <Fragment slot="title">Light up life with technology.</Fragment>
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">AI × Game × Creativity</span>
+      <span class="block">Make creativity part of everyday life.</span>
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What Lilivi brings"
+    subtitle="Fast, flexible and warm experiences by design."
+    items={[
+      { title: 'Astro + Tailwind', description: 'Modern SSG/hybrid with atomic CSS.', icon: 'tabler:brand-tailwind' },
+      { title: 'Ready-made components', description: 'Hero, Features, Pricing, Footer and more.', icon: 'tabler:components' },
+      { title: 'Best practices', description: 'Solid structure, SEO and accessibility.', icon: 'tabler:list-check' },
+      { title: 'Great performance', description: 'Faster pages, better UX and conversion.', icon: 'tabler:rocket' },
+      { title: 'SEO friendly', description: 'Metadata and OG optimization built in.', icon: 'tabler:arrows-right-left' },
+      { title: 'Open & collaborative', description: 'We welcome ideas and contributions.', icon: 'tabler:bulb' },
+    ]}
+  />
+
+  <Features2
+    title="Common components"
+    subtitle="Cover most marketing/product sites"
+    tagline="Components"
+    items={[
+      { title: 'Headers', description: 'Clear navigation, clear direction.', icon: 'flat-color-icons:template' },
+      { title: 'Hero', description: 'Set the first impression.', icon: 'flat-color-icons:gallery' },
+      { title: 'Features', description: 'Show your value clearly.', icon: 'flat-color-icons:approval' },
+      { title: 'Content', description: 'Content carries your message.', icon: 'flat-color-icons:document' },
+      { title: 'CTA', description: 'Guide actions and improve conversion.', icon: 'flat-color-icons:advertising' },
+      { title: 'Pricing', description: 'Clear plans, faster decisions.', icon: 'flat-color-icons:currency-exchange' },
+    ]}
+  />
+
+  <Pricing
+    title="Pricing"
+    subtitle="Pick a plan and start creating"
+    tagline="Pricing"
+    prices={[
+      { title: 'Free', subtitle: 'For personal trial', price: '0', period: '/mo', items: [ { description: 'Basic features' }, { description: 'Community support' } ], callToAction: { text: 'Get Started', href: '/en/products' } },
+      { title: 'Pro', subtitle: 'For creators/teams', price: '19', period: '/mo', items: [ { description: 'Advanced components/themes' }, { description: 'Priority email support' }, { description: 'Commercial license' } ], callToAction: { text: 'Try Now', href: '/en/products/play' }, hasRibbon: true, ribbonTitle: 'Popular' },
+      { title: 'Team', subtitle: 'For organizations', price: '99', period: '/mo', items: [ { description: 'Collaboration & permissions' }, { description: 'Priority tech support' }, { description: 'Customization consult' } ], callToAction: { text: 'Contact Us', href: '/en/contact' } },
+    ]}
+  />
+
+  <CallToAction actions={[{ variant: 'primary', text: 'Start your creative journey', href: '/en/products', icon: 'tabler:rocket' }]}>
+    <Fragment slot="title">AI × Game × Creativity</Fragment>
+    <Fragment slot="subtitle">Technology should be gentle, not cold. Start now.</Fragment>
+  </CallToAction>
+</PageLayout>
+

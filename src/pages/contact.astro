@@ -5,74 +5,66 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: '联系',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="联系" title="保持联系！" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="给我们留言"
+    subtitle="若需更快获取答案，可先查看常见问题；也可直接联系我们。"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: '姓名',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: '邮箱',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: '留言',
     }}
     disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      label: '提交本表单即表示你同意我们出于联系目的收集所填信息。',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="我们通常在 24 小时内回复。也可直接邮件至：support@lilivi.com"
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="我们很乐意提供帮助"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: '通用支持',
+        description: `咨询账户、导航、支付或网站功能相关问题。`,
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: '商务合作',
+        description: '购买、定制、商业授权或具体方案咨询。',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+        title: '技术支持',
+        description: '安装、编辑、兼容或其他技术问题。',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
+        title: '邮箱',
+        description: 'support@lilivi.com',
         icon: 'tabler:headset',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: '公司',
+        description: '厦门哩哩唯科技有限公司',
+        icon: 'tabler:building',
       },
     ]}
   />

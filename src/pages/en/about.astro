@@ -1,0 +1,14 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
+
+const metadata = { title: 'About - Lilivi', description: 'Technology × Warmth × Imagination' };
+---
+
+<PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 max-w-4xl">
+    <h1 class="text-4xl font-heading font-bold mb-4">About us</h1>
+    <p class="text-muted">Lilivi blends AI and game mechanics to make technology warmer and more human-centered.</p>
+  </section>
+</PageLayout>
+

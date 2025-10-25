@@ -1,0 +1,26 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '加入我们 - Lilivi',
+  description: 'Lilivi 招聘与文化：年轻 · 创意 · 温暖 · 科技',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 max-w-4xl">
+    <h1 class="text-4xl font-heading font-bold mb-4">加入我们</h1>
+    <p class="text-muted">我们相信：科技应当温柔，而非冰冷。欢迎热爱 AI、游戏与创造力的你。</p>
+    <ul class="mt-8 space-y-4">
+      <li class="p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+        <h3 class="font-semibold">产品设计 / 前端工程师</h3>
+        <p class="text-muted text-sm mt-1">强调用户体验与动效实现，熟悉现代前端与设计系统。</p>
+      </li>
+      <li class="p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+        <h3 class="font-semibold">游戏玩法工程师 / AI 工程师</h3>
+        <p class="text-muted text-sm mt-1">对交互与智能体有热情，探索 AI × Game 的可能性。</p>
+      </li>
+    </ul>
+  </section>
+</PageLayout>
+

@@ -1,0 +1,24 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
+
+const metadata = { title: 'Contact - Lilivi', description: 'Get in touch' };
+---
+
+<PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
+  <HeroText tagline="Contact" title="Let's Connect!" />
+  <ContactUs
+    id="form"
+    title="Drop us a message today!"
+    subtitle="Our support team is happy to help you."
+    inputs={[
+      { type: 'text', name: 'name', label: 'Name' },
+      { type: 'email', name: 'email', label: 'Email' },
+    ]}
+    textarea={{ label: 'Message' }}
+    disclaimer={{ label: 'By submitting this form you agree to our privacy policy.' }}
+    description="We typically respond within 24 business hours. Or email us directly: support@lilivi.com"
+  />
+</PageLayout>
