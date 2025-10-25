@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: '关于我们',
 };
 ---
 
@@ -15,60 +15,58 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="关于我们"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       alt: 'Caos Image',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      以创意与技术，打造<br />
+      <span class="text-accent dark:text-white"> 有温度的数字体验</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      我们将 AI 与游戏的创造力相融合，让科技不再冰冷。通过稳健的工程与精致的设计，为品牌与个人提供高效、可持续的建站与体验解决方案。
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="关于我们的数字"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: '办公室', amount: '4' },
+      { title: '成员', amount: '48+' },
+      { title: '组件/模板', amount: '120+' },
+      { title: '奖项/认可', amount: '24' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="我们在做什么"
+    subtitle="以模块化组件与最佳实践为核心，快速构建既美观又高性能的网站与产品体验。"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: '品牌与官网',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+          '以品牌调性为核心的官网设计与开发，强调可读性、转化与增长。',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
+        title: '产品站点',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+          '面向产品/服务的营销落地页与文档系统，覆盖定价、案例与常见问题。',
         icon: 'tabler:template',
       },
       {
-        title: 'Photography',
+        title: '博客与内容',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+          '关注内容生产与分发的写作体验：MD/MDX、多语言、分类与标签。',
         icon: 'tabler:template',
       },
     ]}
@@ -81,39 +79,39 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: '高性能',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+          '基于 Astro 的按需加载与服务端渲染能力，默认即高分性能与 SEO。',
         icon: 'tabler:template',
       },
       {
-        title: 'Blog',
+        title: '可维护',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+          '清晰的项目结构与组件化策略，降低维护成本，支持持续迭代。',
         icon: 'tabler:template',
       },
       {
-        title: 'Business',
+        title: '易扩展',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+          '支持多语言、博客系统、分析与图像优化等特性，按需接入。',
         icon: 'tabler:template',
       },
       {
-        title: 'Branding',
+        title: '品牌一致性',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+          '通过变量与主题系统，快速对齐品牌色、字体与交互细节。',
         icon: 'tabler:template',
       },
       {
-        title: 'Medical',
+        title: '可访问性',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+          '注重可访问性与键盘交互，保证不同设备与人群都能友好使用。',
         icon: 'tabler:template',
       },
       {
-        title: 'Fashion Design',
+        title: '可观测性',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+          '内置分析与日志埋点，支持关键行为追踪，辅助后续优化。',
         icon: 'tabler:template',
       },
     ]}
@@ -126,23 +124,23 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="我们的价值观"
+    subtitle="科技应当温柔，而非冰冷。保持开放、协作与持续改进，构建可持续的产品与生态。"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: '以人为本',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          '尊重用户情绪与期待，在每一个细节里保持温度与确定性。',
       },
       {
-        title: 'Constant Improvement',
+        title: '持续改进',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          '拥抱变化与反馈，快速试错与优化，保持产品生命力。',
       },
       {
-        title: 'Ethical Practices',
+        title: '伦理与责任',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          '在数据、算法与体验的每一环，保持透明、公平与责任。',
       },
     ]}
   />
@@ -150,29 +148,29 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="里程碑"
+    subtitle="我们在不断演进中实现更好的体验与更快的交付。"
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: '了解更多',
+      href: '/blog',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        title: '多语言支持',
+        description: '提供中英文页面切换与内容管理能力，轻松触达全球用户。',
         icon: 'tabler:globe',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: '用户口碑',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+          '来自社区与客户的积极反馈，推动我们不断改进。',
         icon: 'tabler:message-star',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: '行业认可',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          '在性能、体验与可访问性方面持续获得认可。',
         icon: 'tabler:award',
       },
     ]}
@@ -181,25 +179,25 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
+    title="我们在哪里"
     tagline="Find us"
     columns={4}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: '中国',
+        description: '厦门',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: '新加坡',
+        description: '即将开放',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: '北美',
+        description: '远程办公',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: '欧洲',
+        description: '远程办公',
       },
     ]}
   />
@@ -207,20 +205,20 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
+    title="技术与支持"
     tagline="Contact us"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: '联系我们',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          '有任何想法或合作需求，欢迎通过邮箱与我们取得联系：support@lilivi.com',
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: '加入我们',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          '热爱 AI、游戏与创造力？欢迎加入我们，共创有温度的产品。',
         icon: 'tabler:headset',
       },
     ]}

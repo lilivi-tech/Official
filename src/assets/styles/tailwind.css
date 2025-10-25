@@ -18,6 +18,21 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+
+  /* Warm gradient text for "lighting up" effect */
+  .text-warm-light {
+    /* 亮色主题：保持常规文本颜色 */
+    color: inherit;
+  }
+  .dark .text-warm-light {
+    /* 暗色主题：从左到右由浅到深（如夜晚开灯） */
+    background: linear-gradient(90deg, #FFECB3 0%, #FFD740 40%, #FFC107 70%, #FFB300 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* 轻微发光（双层柔光） */
+    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.40)) drop-shadow(0 0 14px rgba(255, 234, 0, 0.28));
+  }
 }
 
 @layer components {
@@ -37,14 +52,58 @@
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
 
-  /* 玻璃拟态按钮（Lilivi）：明暗模式更友好的对比度 */
+  /* 玻璃拟态按钮（毛玻璃） */
   .btn-glass {
-    @apply inline-flex items-center justify-center rounded-full border font-semibold text-base leading-snug transition ease-in duration-200 backdrop-blur-md shadow-sm;
-    @apply text-primary bg-transparent border-gray-300 hover:bg-gray-50; /* 亮色模式 */
+    @apply inline-flex items-center justify-center rounded-full font-semibold text-base leading-snug transition duration-200 backdrop-blur-md shadow-sm px-5 py-3 md:px-6 md:py-3.5;
+    /* 亮色模式更贴近普通深色文字风格 */
+    @apply border border-gray-300 text-slate-900 bg-white/60 hover:bg-white/80;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-40;
   }
-  .dark .btn-glass {
-    @apply text-white bg-white/10 border-white/20 hover:bg-white/20; /* 暗色模式 */
+  .btn-glass:active { @apply scale-[0.99]; }
+  .dark .btn-glass { @apply border-white/25 text-white bg-white/10 hover:bg-white/20; }
+  /* 在浅色背景使用时，可额外添加 text-primary 来增强对比 */
+
+  /* 液态按钮（Liquid/Gel） */
+  .btn-liquid {
+    @apply relative inline-flex items-center justify-center rounded-full font-semibold text-base leading-snug px-5 py-3 md:px-6 md:py-3.5 text-slate-900 shadow-lg transition duration-200;
+    background: linear-gradient(135deg, #B39CFF, #A296D9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(179, 156, 255, 0.35), 0 2px 8px rgba(162, 150, 217, 0.25);
   }
+  .btn-liquid::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 9999px;
+    background:
+      radial-gradient(120% 120% at 12% 8%, rgba(255, 255, 255, 0.35), transparent 40%),
+      radial-gradient(120% 120% at 88% 92%, rgba(255, 255, 255, 0.25), transparent 45%);
+    filter: blur(8px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .btn-liquid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .btn-liquid:hover {
+    transform: translateY(-1px);
+    filter: saturate(1.08) brightness(1.03);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .btn-liquid:active {
+    transform: translateY(0);
+    filter: saturate(1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .btn-liquid:focus-visible { @apply outline-none ring-2 ring-primary ring-opacity-40; }
+  .dark .btn-liquid { @apply text-white; border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 8px 22px rgba(179,156,255,.22), 0 2px 8px rgba(162,150,217,.18); }
+  .dark .btn-liquid:hover { filter: saturate(1.06) brightness(1.02); box-shadow: 0 10px 26px rgba(179,156,255,.28), 0 4px 12px rgba(162,150,217,.22); }
 }
 
 /* Lilivi 紫色渐变背景 */

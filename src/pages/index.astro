@@ -26,8 +26,8 @@ const metadata = {
 
   <Hero
     actions={[
-      { text: '探索产品', href: '/products', class: 'btn-glass' },
-      { text: '立即体验', href: '/products/play', variant: 'primary' },
+      { text: '探索产品', href: '/products', variant: 'liquid' },
+      { text: '立即体验', href: '/products/play', variant: 'liquid' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'Lilivi Hero Image' }}
   >
@@ -36,7 +36,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="title">
-      用科技，点亮生活的温度。
+      用科技，点亮生活<span class="text-warm-light">的温度。</span>
     </Fragment>
 
     <Fragment slot="subtitle">

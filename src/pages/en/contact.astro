@@ -2,6 +2,7 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
 const metadata = { title: 'Contact - Lilivi', description: 'Get in touch' };
@@ -20,5 +21,14 @@ const metadata = { title: 'Contact - Lilivi', description: 'Get in touch' };
     textarea={{ label: 'Message' }}
     disclaimer={{ label: 'By submitting this form you agree to our privacy policy.' }}
     description="We typically respond within 24 business hours. Or email us directly: support@lilivi.com"
+  />
+
+  <Features2
+    title="Other channels"
+    columns={2}
+    items={[
+      { title: 'Email', description: 'support@lilivi.com', icon: 'tabler:mail' },
+      { title: 'Join us', description: 'Love AI, games and creativity? /en/join', icon: 'tabler:users' },
+    ]}
   />
 </PageLayout>

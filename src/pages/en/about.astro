@@ -2,13 +2,149 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
 const metadata = { title: 'About - Lilivi', description: 'Technology × Warmth × Imagination' };
 ---
 
 <PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 max-w-4xl">
-    <h1 class="text-4xl font-heading font-bold mb-4">About us</h1>
-    <p class="text-muted">Lilivi blends AI and game mechanics to make technology warmer and more human-centered.</p>
-  </section>
-</PageLayout>
+  <Hero
+    tagline="About us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Team Image',
+    }}
+  >
+    <Fragment slot="title">
+      Build <br />
+      <span class="text-accent dark:text-white">Warm Digital Experiences</span>
+    </Fragment>
 
+    <Fragment slot="subtitle">
+      We blend AI with the creativity of games to make technology gentle, human-centered, and truly delightful.
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title="Numbers that matter"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Members', amount: '48+' },
+      { title: 'Components/Templates', amount: '120+' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  />
+
+  <Features3
+    title="What we build"
+    subtitle="We focus on modular components and best practices to deliver websites that are beautiful and blazing fast."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Brand & Websites',
+        description: 'Brand-driven corporate sites that prioritize readability, conversion, and growth.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Product Sites',
+        description: 'Marketing landings and docs for products/services: pricing, cases, and FAQs.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog & Content',
+        description: 'Writer-friendly experience with MD/MDX, i18n, categories, and tags.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'High Performance',
+        description: 'Astro-powered builds with on-demand loading and great SEO out of the box.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Maintainable',
+        description: 'Clear structure and componentization reduce maintenance costs and support iteration.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Extensible',
+        description: 'i18n, blog, analytics, and image optimization — plug in features as you need.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Brand Consistency',
+        description: 'Align colors, typography, and interactions quickly via theme variables.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Accessibility',
+        description: 'Keyboard-friendly and accessible by design across devices and audiences.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Observability',
+        description: 'Built-in analytics and logging hooks for meaningful behavior tracking.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <Steps2
+    title="Our values"
+    subtitle="Technology should be gentle, not cold. Stay open, collaborative and continuously improving."
+    items={[
+      { title: 'Human-centered', description: 'Respect emotions and expectations — keep warmth and certainty in the details.' },
+      { title: 'Continuous improvement', description: 'Embrace change and feedback, iterate quickly, keep products alive.' },
+      { title: 'Ethics & responsibility', description: 'Be transparent and fair across data, algorithms, and experiences.' },
+    ]}
+  />
+
+  <Steps2
+    title="Milestones"
+    subtitle="We’re evolving to deliver better experiences, faster."
+    isReversed={true}
+    callToAction={{ text: 'Learn more', href: '/en/blog' }}
+    items={[
+      { title: 'i18n-ready', description: 'English/Chinese pages and content — reach users globally.', icon: 'tabler:globe' },
+      { title: 'Positive feedback', description: 'Community and client feedback drives our improvements.', icon: 'tabler:message-star' },
+      { title: 'Industry recognition', description: 'Performance, UX, and accessibility continually recognized.', icon: 'tabler:award' },
+    ]}
+  />
+
+  <Features2
+    title="Where we are"
+    tagline="Find us"
+    columns={4}
+    items={[
+      { title: 'China', description: 'Xiamen' },
+      { title: 'Singapore', description: 'Coming soon' },
+      { title: 'North America', description: 'Remote' },
+      { title: 'Europe', description: 'Remote' },
+    ]}
+  />
+
+  <Features2
+    title="Tech & Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      { title: 'Contact us', description: 'Ideas or cooperation? Email: support@lilivi.com', icon: 'tabler:messages' },
+      { title: 'Join us', description: 'Love AI, games and creativity? Join us to build warm products.', icon: 'tabler:headset' },
+    ]}
+  />
+</PageLayout>

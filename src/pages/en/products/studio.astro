@@ -1,6 +1,7 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = { title: 'Studio - Lilivi', description: 'Studio: Creative AI tools' };
 ---
@@ -10,9 +11,9 @@ const metadata = { title: 'Studio - Lilivi', description: 'Studio: Creative AI t
     <h1 class="text-4xl font-heading font-bold mb-4">Studio</h1>
     <p class="text-muted">Amplify creativity with AI and move from ideas to results fast.</p>
     <div class="mt-8 rounded-xl p-8 border border-primary/30 bg-white/40 dark:bg-slate-900/40 backdrop-blur">
-      <h2 class="text-2xl font-bold mb-2">In development</h2>
-      <p class="opacity-80">Follow updates or contact us for early access.</p>
+      <h2 class="text-2xl font-bold mb-3">In development</h2>
+      <p class="opacity-80 mb-5">Follow updates or contact us for early access.</p>
+      <Button variant="liquid" href="/en/contact">Request access</Button>
     </div>
   </section>
 </PageLayout>
-

@@ -133,22 +133,49 @@ const enHref = isEn ? pathname : ('/en' + (pathname === '/' ? '' : pathname));
         }
       </ul>
     </nav>
+    <!-- Desktop right controls (transparent, no bg) -->
+    <div class="hidden md:flex items-center md:w-auto md:justify-end md:justify-self-end gap-2 md:gap-3 md:p-0">
+      {showLanguageSwitch && (
+        <div class="inline-flex items-center text-sm text-muted">
+          <a
+            data-aw-collapse-on-click
+            class="px-2 py-1 rounded transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30 md:focus:ring-0"
+            href={zhHref}
+            >中文</a
+          >
+          <span class="opacity-50 px-1">/</span>
+          <a
+            data-aw-collapse-on-click
+            class="px-2 py-1 rounded transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30 md:focus:ring-0"
+            href={enHref}
+            >EN</a
+          >
+        </div>
+      )}
+      {showToggleTheme && (
+        <div class="ml-1">
+          <ToggleTheme iconClass="w-5 h-5 md:inline-block" />
+        </div>
+      )}
+    </div>
+
+    <!-- Mobile bottom bar (fixed, blurred bg) MUST remain last-child for collapse script -->
     <div
-      class="hidden flex md:flex items-center w-full justify-between md:w-auto md:justify-end md:justify-self-end gap-3 p-4 md:p-0 border-t border-gray-200 dark:border-gray-700 md:border-0 fixed bottom-0 left-0 right-0 bg-white/85 dark:bg-[#030621cc] backdrop-blur shadow-[0_-6px_16px_rgba(0,0,0,0.04)] md:shadow-none md:static md:bg-transparent"
+      class="flex md:hidden items-center w-full justify-between gap-3 p-4 border-t border-gray-200 dark:border-gray-700 fixed bottom-0 left-0 right-0 bg-white/85 dark:bg-[#030621cc] backdrop-blur shadow-[0_-6px_16px_rgba(0,0,0,0.04)]"
     >
       <div class="flex items-center gap-2">
         {showLanguageSwitch && (
           <div class="inline-flex items-center text-sm text-muted">
             <a
               data-aw-collapse-on-click
-              class="px-2 py-1 rounded transition-colors hover:text-white hover:bg-white/10 active:bg-black/5 dark:active:bg-white/10 md:hover:bg-transparent md:active:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/30 md:focus:ring-0"
+              class="px-2 py-1 rounded transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30 md:focus:ring-0"
               href={zhHref}
               >中文</a
             >
             <span class="opacity-50 px-1">/</span>
             <a
               data-aw-collapse-on-click
-              class="px-2 py-1 rounded transition-colors hover:text-white hover:bg-white/10 active:bg-black/5 dark:active:bg-white/10 md:hover:bg-transparent md:active:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/30 md:focus:ring-0"
+              class="px-2 py-1 rounded transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30 md:focus:ring-0"
               href={enHref}
               >EN</a
             >
@@ -160,28 +187,28 @@ const enHref = isEn ? pathname : ('/en' + (pathname === '/' ? '' : pathname));
           </div>
         )}
       </div>
-      <div class="flex-1 md:hidden text-[12px] leading-relaxed text-muted text-left">
+      <div class="flex-1 text-[12px] leading-relaxed text-muted text-left">
         <span>
           Copyright © 2025 Xiamen Lilivi Technology Co., Ltd. All rights reserved.
         </span>
         <span class="mx-1">·</span>
         <a
           data-aw-collapse-on-click
-          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:active:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary/30"
+          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:hover:bg-transparent dark:active:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30"
           href={isEn ? '/en/privacy' : '/privacy'}
           >Privacy Policy</a
         >
         <span class="mx-1">｜</span>
         <a
           data-aw-collapse-on-click
-          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:active:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary/30"
+          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:hover:bg-transparent dark:active:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30"
           href={isEn ? '/en/terms' : '/terms'}
           >Terms of Use</a
         >
         <span class="mx-1">|</span>
         <a
           data-aw-collapse-on-click
-          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:active:bg-white/10 focus:outline-none focus:ring-2 focus:ring-primary/30"
+          class="inline-flex items-center px-1 -mx-1 rounded underline hover:text-primary transition-colors active:bg-black/5 dark:hover:bg-transparent dark:active:bg-transparent focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-30"
           href="mailto:support@lilivi.com"
           >联系</a
         >
