@@ -13,8 +13,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Lilivi — 用科技，点亮生活的温度',
-  description:
-    'Lilivi 致力于用 AI 与游戏的力量，让科技更具人文温度，让创造力回归生活。AI × Game × Creativity',
+  description: 'Lilivi 致力于用 AI 与游戏的力量，让科技更具人文温度，让创造力回归生活。AI × Game × Creativity',
   ignoreTitleTemplate: true,
 };
 ---
@@ -119,8 +118,6 @@ const metadata = {
 
   <!-- Features2 Widget hidden as requested -->
 
-  
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -139,21 +136,11 @@ const metadata = {
 
   <!-- Stats Widget hidden as requested -->
 
-  
-
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      { variant: 'primary', text: '开启你的创意之旅', href: '/products', icon: 'tabler:rocket' },
-    ]}
-  >
-    <Fragment slot="title">
-      AI × Game × Creativity
-    </Fragment>
+  <CallToAction actions={[{ variant: 'primary', text: '开启你的创意之旅', href: '/products', icon: 'tabler:rocket' }]}>
+    <Fragment slot="title"> AI × Game × Creativity </Fragment>
 
-    <Fragment slot="subtitle">
-      科技应当温柔，而非冰冷。现在就开始，点亮生活的温度。
-    </Fragment>
+    <Fragment slot="subtitle"> 科技应当温柔，而非冰冷。现在就开始，点亮生活的温度。 </Fragment>
   </CallToAction>
 </Layout>

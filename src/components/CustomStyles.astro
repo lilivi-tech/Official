@@ -22,14 +22,20 @@ import '@fontsource-variable/inter';
 <style is:inline>
   :root {
     /* 优先中文系统字体，其次英文可变字体 */
-    --aw-font-sans: 'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    --aw-font-serif: 'Source Han Sans SC', 'Songti SC', 'STSong', 'Inter Variable', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --aw-font-heading: 'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --aw-font-sans:
+      'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',
+      'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --aw-font-serif:
+      'Source Han Sans SC', 'Songti SC', 'STSong', 'Inter Variable', ui-serif, Georgia, Cambria, 'Times New Roman',
+      Times, serif;
+    --aw-font-heading:
+      'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter Variable', system-ui,
+      -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 
     /* Lilivi 品牌主色 */
-    --aw-color-primary: #B39CFF; /* 品牌主紫 */
-    --aw-color-secondary: #A296D9; /* 深紫/辅助 */
-    --aw-color-accent: #A296D9;
+    --aw-color-primary: #b39cff; /* 品牌主紫 */
+    --aw-color-secondary: #a296d9; /* 深紫/辅助 */
+    --aw-color-accent: #a296d9;
 
     --aw-color-text-heading: rgb(0 0 0);
     --aw-color-text-default: rgb(16 16 16);
@@ -38,28 +44,44 @@ import '@fontsource-variable/inter';
 
     --aw-color-bg-page-dark: rgb(3 6 32);
 
-    ::selection { background-color: rgba(179, 156, 255, 0.35); color: #0b0b0b; }
+    ::selection {
+      background-color: rgba(179, 156, 255, 0.35);
+      color: #0b0b0b;
+    }
   }
 
   .dark {
-    --aw-font-sans: 'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    --aw-font-serif: 'Source Han Sans SC', 'Songti SC', 'STSong', 'Inter Variable', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    --aw-font-heading: 'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --aw-font-sans:
+      'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',
+      'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --aw-font-serif:
+      'Source Han Sans SC', 'Songti SC', 'STSong', 'Inter Variable', ui-serif, Georgia, Cambria, 'Times New Roman',
+      Times, serif;
+    --aw-font-heading:
+      'Source Han Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter Variable', system-ui,
+      -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 
-    --aw-color-primary: #B39CFF;
-    --aw-color-secondary: #A296D9;
-    --aw-color-accent: #A296D9;
+    --aw-color-primary: #b39cff;
+    --aw-color-secondary: #a296d9;
+    --aw-color-accent: #a296d9;
 
     --aw-color-text-heading: rgb(247, 248, 248);
     --aw-color-text-default: rgb(229 236 246);
     --aw-color-text-muted: rgb(229 236 246 / 68%);
     --aw-color-bg-page: rgb(3 6 32);
 
-    ::selection { background-color: rgba(179, 156, 255, 0.35); color: #ffffff; }
-    --aw-font-logo: 'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    ::selection {
+      background-color: rgba(179, 156, 255, 0.35);
+      color: #ffffff;
+    }
+    --aw-font-logo:
+      'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial,
+      sans-serif;
   }
-    /* Logo font (free & commercial): Space Grotesk */
-    --aw-font-logo: 'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  /* Logo font (free & commercial): Space Grotesk */
+  --aw-font-logo:
+    'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
 
   /* Logo text helper */
   .aw-logo-text {
@@ -69,17 +91,6 @@ import '@fontsource-variable/inter';
 </style>
 
 <!-- Load Space Grotesk from Google Fonts (free, commercial use) -->
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
-  crossorigin
-/>
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
-  rel="stylesheet"
-/>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />

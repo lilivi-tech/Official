@@ -33,27 +33,29 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
     <hr class="border-gray-200 dark:border-slate-800 my-6 md:my-8" />
 
     <!-- Social row -->
-    {socialLinks?.length ? (
-      <ul class="flex items-center justify-start gap-2 md:gap-3 mb-4 md:mb-5">
-        {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-          <li>
-            <a
-              class="text-gray-400 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm p-2 inline-flex items-center transition filter grayscale hover:grayscale-0"
-              aria-label={ariaLabel}
-              href={href}
-            >
-              {icon && <Icon name={icon} class="w-5 h-5" />}
-              <Fragment set:html={text} />
-            </a>
-          </li>
-        ))}
-      </ul>
-    ) : (
-      ''
-    )}
+    {
+      socialLinks?.length ? (
+        <ul class="flex items-center justify-start gap-2 md:gap-3 mb-4 md:mb-5">
+          {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+            <li>
+              <a
+                class="text-gray-400 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm p-2 inline-flex items-center transition filter grayscale hover:grayscale-0"
+                aria-label={ariaLabel}
+                href={href}
+              >
+                {icon && <Icon name={icon} class="w-5 h-5" />}
+                <Fragment set:html={text} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        ''
+      )
+    }
 
     <!-- Copyright -->
-    <div class="text-[13px] text-muted dark:text-gray-400 mb-2.5"> 
+    <div class="text-[13px] text-muted dark:text-gray-400 mb-2.5">
       <Fragment set:html={footNote} />
     </div>
 

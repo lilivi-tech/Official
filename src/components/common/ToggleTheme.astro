@@ -12,14 +12,13 @@ export interface Props {
 
 const {
   label = 'Toggle between Dark and Light mode',
-  class:
-    className = [
-      'text-muted dark:text-gray-400',
-      // Mobile: subtle hover bg + ring; Desktop: remove bg + ring
-      'hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700',
-      'md:hover:bg-transparent md:dark:hover:bg-transparent md:focus:ring-0 md:dark:focus:ring-0',
-      'rounded-lg text-sm p-2.5 inline-flex items-center',
-    ].join(' '),
+  class: className = [
+    'text-muted dark:text-gray-400',
+    // Mobile: subtle hover bg + ring; Desktop: remove bg + ring
+    'hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700',
+    'md:hover:bg-transparent md:dark:hover:bg-transparent md:focus:ring-0 md:dark:focus:ring-0',
+    'rounded-lg text-sm p-2.5 inline-flex items-center',
+  ].join(' '),
   iconClass = 'w-6 h-6',
   iconName = 'tabler:sun',
 } = Astro.props;

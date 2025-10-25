@@ -244,10 +244,7 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
   );
 };
 
-export const getStaticPathsBlogCategoryByLang = async (
-  { paginate }: { paginate: PaginateFunction },
-  lang: string
-) => {
+export const getStaticPathsBlogCategoryByLang = async ({ paginate }: { paginate: PaginateFunction }, lang: string) => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPostsByLang(lang);

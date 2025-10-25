@@ -11,7 +11,7 @@ metadata:
   title:
     default: Lilivi
     template: '%s — Lilivi'
-  description: "用科技，点亮生活的温度。AI × Game × Creativity"
+  description: '用科技，点亮生活的温度。AI × Game × Creativity'
   robots:
     index: true
     follow: true

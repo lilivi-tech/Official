@@ -2,6 +2,7 @@
 title: Cookie Settings
 layout: '~/layouts/MarkdownLayout.astro'
 ---
+
 Here you can manage your cookie preferences for this website.
 
 - Strictly necessary cookies are always on to keep the site secure and functional.

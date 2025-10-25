@@ -50,19 +50,50 @@ const linkEn = base + link;
         <span class="text-sm">
           <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
           <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
-          {post.author && (<><span> · </span><Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" /><span>{post.author.replaceAll('-', ' ')}</span></>)}
-          {post.category && (<><span> · </span><a class="hover:underline" href={base + getPermalink(post.category.slug, 'category')}>{post.category.title}</a></>)}
+          {
+            post.author && (
+              <>
+                <>
+                  <span> · </span>
+                  <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
+                  <span>{post.author.replaceAll('-', ' ')}</span>
+                </>
+              </>
+            )
+          }
+          {
+            post.category && (
+              <>
+                <>
+                  <span> · </span>
+                  <a class="hover:underline" href={base + getPermalink(post.category.slug, 'category')}>
+                    {post.category.title}
+                  </a>
+                </>
+              </>
+            )
+          }
         </span>
       </div>
       <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
-        <a class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={linkEn}>
+        <a
+          class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
+          href={linkEn}
+        >
           {post.title}
         </a>
       </h2>
     </header>
 
     {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
-    {post.tags && Array.isArray(post.tags) ? (<footer class="mt-5"><PostTags tags={post.tags} /></footer>) : (<Fragment />)}
+    {
+      post.tags && Array.isArray(post.tags) ? (
+        <footer class="mt-5">
+          <PostTags tags={post.tags} />
+        </footer>
+      ) : (
+        <Fragment />
+      )
+    }
   </div>
 </article>
-

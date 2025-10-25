@@ -5,7 +5,11 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
-const metadata = { title: 'Contact - Lilivi', description: 'Stay in touch: we typically reply within 24 hours. You can also email us directly at support@lilivi.com' };
+const metadata = {
+  title: 'Contact - Lilivi',
+  description:
+    'Stay in touch: we typically reply within 24 hours. You can also email us directly at support@lilivi.com',
+};
 ---
 
 <PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
@@ -21,7 +25,9 @@ const metadata = { title: 'Contact - Lilivi', description: 'Stay in touch: we ty
       { type: 'email', name: 'email', label: 'Email' },
     ]}
     textarea={{ label: 'Message' }}
-    disclaimer={{ label: 'By submitting this form, you consent to us collecting this information for contact purposes.' }}
+    disclaimer={{
+      label: 'By submitting this form, you consent to us collecting this information for contact purposes.',
+    }}
     description="We typically reply within 24 hours. Or email us directly: support@lilivi.com"
   />
 
@@ -29,7 +35,10 @@ const metadata = { title: 'Contact - Lilivi', description: 'Stay in touch: we ty
     title="We're happy to help"
     items={[
       { title: 'General Support', description: 'Questions about accounts, navigation, payments, or site features.' },
-      { title: 'Business Partnerships', description: 'Purchases, customization, commercial licensing, or solution inquiries.' },
+      {
+        title: 'Business Partnerships',
+        description: 'Purchases, customization, commercial licensing, or solution inquiries.',
+      },
       { title: 'Technical Support', description: 'Installation, editing, compatibility, or other technical issues.' },
       { title: 'Email', description: 'support@lilivi.com', icon: 'tabler:headset' },
       { title: 'Company', description: 'Xiamen Lilivi Technology Co., Ltd.', icon: 'tabler:building' },

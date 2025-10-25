@@ -38,4 +38,3 @@ Lilivi may delete any user content generated via the AI Features at its discreti
 ## Miscellaneous
 
 Sections on Indemnity, Limitation of Liability, Third‑Party Services & Links, Force Majeure, Modification/Suspension/Termination, Governing Law & Disputes, and IP Infringement Notices in the Terms of Use apply to these AI Terms.
-

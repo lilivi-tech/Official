@@ -21,12 +21,12 @@ const { metadata, lang, headerOverride, footerOverride } = Astro.props;
 <Layout metadata={metadata} lang={lang}>
   <slot name="announcement" />
   <slot name="header">
-    <Header {...(headerOverride || headerData)} isSticky showToggleTheme showLanguageSwitch />
+    <Header {...headerOverride || headerData} isSticky showToggleTheme showLanguageSwitch />
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...(footerOverride || footerData)} />
+    <Footer {...footerOverride || footerData} />
   </slot>
 </Layout>

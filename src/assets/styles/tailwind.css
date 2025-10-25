@@ -26,12 +26,12 @@
   }
   .dark .text-warm-light {
     /* 暗色主题：从左到右由浅到深（如夜晚开灯） */
-    background: linear-gradient(90deg, #FFECB3 0%, #FFD740 40%, #FFC107 70%, #FFB300 100%);
+    background: linear-gradient(90deg, #ffecb3 0%, #ffd740 40%, #ffc107 70%, #ffb300 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     /* 轻微发光（双层柔光） */
-    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.40)) drop-shadow(0 0 14px rgba(255, 234, 0, 0.28));
+    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.4)) drop-shadow(0 0 14px rgba(255, 234, 0, 0.28));
   }
 }
 
@@ -59,16 +59,22 @@
     @apply border border-gray-300 text-slate-900 bg-white/60 hover:bg-white/80;
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-40;
   }
-  .btn-glass:active { @apply scale-[0.99]; }
-  .dark .btn-glass { @apply border-white/25 text-white bg-white/10 hover:bg-white/20; }
+  .btn-glass:active {
+    @apply scale-[0.99];
+  }
+  .dark .btn-glass {
+    @apply border-white/25 text-white bg-white/10 hover:bg-white/20;
+  }
   /* 在浅色背景使用时，可额外添加 text-primary 来增强对比 */
 
   /* 液态按钮（Liquid/Gel） */
   .btn-liquid {
     @apply relative inline-flex items-center justify-center rounded-full font-semibold text-base leading-snug px-5 py-3 md:px-6 md:py-3.5 text-slate-900 shadow-lg transition duration-200;
-    background: linear-gradient(135deg, #B39CFF, #A296D9);
+    background: linear-gradient(135deg, #b39cff, #a296d9);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 24px rgba(179, 156, 255, 0.35), 0 2px 8px rgba(162, 150, 217, 0.25);
+    box-shadow:
+      0 8px 24px rgba(179, 156, 255, 0.35),
+      0 2px 8px rgba(162, 150, 217, 0.25);
   }
   .btn-liquid::before {
     content: '';
@@ -94,21 +100,38 @@
   .btn-liquid:hover {
     transform: translateY(-1px);
     filter: saturate(1.08) brightness(1.03);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.08);
   }
   .btn-liquid:active {
     transform: translateY(0);
     filter: saturate(1);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow:
+      0 6px 16px rgba(0, 0, 0, 0.08),
+      0 2px 8px rgba(0, 0, 0, 0.06);
   }
-  .btn-liquid:focus-visible { @apply outline-none ring-2 ring-primary ring-opacity-40; }
-  .dark .btn-liquid { @apply text-white; border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 8px 22px rgba(179,156,255,.22), 0 2px 8px rgba(162,150,217,.18); }
-  .dark .btn-liquid:hover { filter: saturate(1.06) brightness(1.02); box-shadow: 0 10px 26px rgba(179,156,255,.28), 0 4px 12px rgba(162,150,217,.22); }
+  .btn-liquid:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-opacity-40;
+  }
+  .dark .btn-liquid {
+    @apply text-white;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      0 8px 22px rgba(179, 156, 255, 0.22),
+      0 2px 8px rgba(162, 150, 217, 0.18);
+  }
+  .dark .btn-liquid:hover {
+    filter: saturate(1.06) brightness(1.02);
+    box-shadow:
+      0 10px 26px rgba(179, 156, 255, 0.28),
+      0 4px 12px rgba(162, 150, 217, 0.22);
+  }
 }
 
 /* Lilivi 紫色渐变背景 */
 .bg-lilivi-gradient {
-  background: linear-gradient(135deg, #B39CFF, #A296D9);
+  background: linear-gradient(135deg, #b39cff, #a296d9);
 }
 
 #header.scroll > div:first-child {

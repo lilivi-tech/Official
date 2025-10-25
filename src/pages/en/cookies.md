@@ -2,6 +2,7 @@
 title: Cookie Policy
 layout: '~/layouts/MarkdownLayout.astro'
 ---
+
 Last Dated: April 11, 2023
 
 Lilivi uses cookies and similar technologies to recognize your preferences and optimize website appearance and usability. This helps make our websites easier to navigate and more user‑friendly.
@@ -23,22 +24,22 @@ We may use both first‑party and third‑party cookies. First‑party cookies a
 
 We group cookies into the categories below:
 
-1) Essential cookies — Necessary for the Site and product to operate (security, sessions, load balancing, core features). These cannot be switched off in our systems.
+1. Essential cookies — Necessary for the Site and product to operate (security, sessions, load balancing, core features). These cannot be switched off in our systems.
 
-2) Analytics cookies — Collect information about how the Site is used so we can measure and improve performance (e.g., page views, navigation, device stats). These are typically provided by third parties.
+2. Analytics cookies — Collect information about how the Site is used so we can measure and improve performance (e.g., page views, navigation, device stats). These are typically provided by third parties.
 
-3) Marketing cookies — Track browsing patterns to help us and partners show ads that are more relevant to you and to limit repetitive ads. These are provided by third parties.
+3. Marketing cookies — Track browsing patterns to help us and partners show ads that are more relevant to you and to limit repetitive ads. These are provided by third parties.
 
 ### Examples (subject to change)
 
-| Type       | Category    | Controller | Cookie (example)     | Typical expiry | Purpose |
-|------------|-------------|-----------|----------------------|----------------|---------|
-| Essential  | First‑party | Lilivi    | session_token        | Session        | Maintain secure sign‑in/session |
-| Analytics  | Third‑party | Google    | _ga                  | Up to 2 years  | Google Analytics site usage |
-| Analytics  | Third‑party | Mixpanel  | mp_xxxxx_mixpanel    | ~1 year        | Analyze behavior paths and optimize experience |
-| Marketing  | Third‑party | Google    | _gcl_au              | ~3 months      | Ads conversion measurement |
-| Marketing  | Third‑party | Meta      | _fbp                 | ~3 months      | Deliver relevant ads/limit frequency |
-| Marketing  | Third‑party | TikTok    | _ttp                 | ~1 year        | Deliver relevant ads/limit frequency |
+| Type      | Category    | Controller | Cookie (example)  | Typical expiry | Purpose                                        |
+| --------- | ----------- | ---------- | ----------------- | -------------- | ---------------------------------------------- |
+| Essential | First‑party | Lilivi     | session_token     | Session        | Maintain secure sign‑in/session                |
+| Analytics | Third‑party | Google     | \_ga              | Up to 2 years  | Google Analytics site usage                    |
+| Analytics | Third‑party | Mixpanel   | mp_xxxxx_mixpanel | ~1 year        | Analyze behavior paths and optimize experience |
+| Marketing | Third‑party | Google     | \_gcl_au          | ~3 months      | Ads conversion measurement                     |
+| Marketing | Third‑party | Meta       | \_fbp             | ~3 months      | Deliver relevant ads/limit frequency           |
+| Marketing | Third‑party | TikTok     | \_ttp             | ~1 year        | Deliver relevant ads/limit frequency           |
 
 The presence, names, and lifetimes of cookies may vary by region, product version, and partner configuration.
 
