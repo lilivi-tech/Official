@@ -20,7 +20,7 @@ We use a variety of cookies for different purposes, including to enhance your ex
 
 ## What types of cookies are used by Lilivi?
 
-We may use both first‑party and third‑party cookies. First‑party cookies are set directly by Lilivi. Third‑party cookies are set by service providers on our behalf and are commonly used for analytics and marketing. Representative third parties may include analytics and advertising providers (e.g., Mixpanel, Google, Meta, TikTok, affiliate networks) and infrastructure providers. The specific list may change over time.
+We may use both first‑party and third‑party cookies. First‑party cookies are set directly by Lilivi. Third‑party cookies are set by service providers on our behalf and are commonly used for analytics and marketing. Representative third parties may include advertising providers (e.g., Google) and infrastructure providers. The specific list may change over time and is further outlined in our Privacy Policy.
 
 We group cookies into the categories below:
 
@@ -32,25 +32,24 @@ We group cookies into the categories below:
 
 ### Examples (subject to change)
 
-| Type      | Category    | Controller | Cookie (example)  | Typical expiry | Purpose                                        |
-| --------- | ----------- | ---------- | ----------------- | -------------- | ---------------------------------------------- |
-| Essential | First‑party | Lilivi     | session_token     | Session        | Maintain secure sign‑in/session                |
-| Analytics | Third‑party | Google     | \_ga              | Up to 2 years  | Google Analytics site usage                    |
-| Analytics | Third‑party | Mixpanel   | mp_xxxxx_mixpanel | ~1 year        | Analyze behavior paths and optimize experience |
-| Marketing | Third‑party | Google     | \_gcl_au          | ~3 months      | Ads conversion measurement                     |
-| Marketing | Third‑party | Meta       | \_fbp             | ~3 months      | Deliver relevant ads/limit frequency           |
-| Marketing | Third‑party | TikTok     | \_ttp             | ~1 year        | Deliver relevant ads/limit frequency           |
+| Type      | Category    | Controller | Cookie (example) | Typical expiry | Purpose                             |
+| --------- | ----------- | ---------- | ---------------- | -------------- | ----------------------------------- |
+| Essential | First‑party | Lilivi     | session_token    | Session        | Maintain secure sign‑in/session     |
+| Marketing | Third‑party | Google     | \_gcl_au         | ~3 months      | Ads conversion measurement (if any) |
 
 The presence, names, and lifetimes of cookies may vary by region, product version, and partner configuration.
 
 ## Your choices
 
 - Manage cookies in your browser (block/delete)
-- Adjust preferences on our Cookie Settings page (when available)
 - Use provider‑specific opt‑out tools (where offered)
+
+### Consent & regional strategy (EEA/UK)
+
+- We use Google UMP/Consent SDK for consent. Before consent, only strictly necessary cookies/SDKs run; ads are non‑personalized (NPA) and analytics are limited to essential aggregated measurements.
 
 Note: Disabling some cookies may affect functionality and experience.
 
 ## Updates & Contact
 
-We may update this Policy from time to time. Questions: support@lilivi.com
+We may update this Policy from time to time. Questions: [support@lilivi.com](mailto:support@lilivi.com). See also our [Privacy Policy](/en/privacy) and [Terms of Use](/en/terms).

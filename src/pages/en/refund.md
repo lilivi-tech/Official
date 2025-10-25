@@ -7,6 +7,8 @@ Last Updated: Oct 25, 2025
 
 Lilivi is committed to providing a clear refund policy to ensure a satisfactory experience. Please read this Refund Policy carefully before making a purchase.
 
+Note: We do not offer direct website checkout. In‑app subscriptions are billed and managed by Apple App Store and Google Play; refunds follow store terms.
+
 ## 1. Auto‑renewal, Upgrade, Downgrade, Cancellation
 
 - Subscriptions automatically renew at the end of each billing period.
@@ -35,10 +37,27 @@ For subscription cancellations, we do not refund any portion of monthly or annua
 
 You are responsible for familiarizing yourself with this Refund Policy. By purchasing subscriptions or credits, you acknowledge that you have read and agree to these terms. If you cannot accept them, please refrain from placing an order.
 
-## 6. How to Request Assistance
+## 6. App Store / Google Play Subscriptions — Refunds & Cancellations
 
-If you believe your case warrants an exception (e.g., erroneous duplicate charge), email support@lilivi.com with your order ID, payment proof, and details. We typically review within 5–10 business days. Refund timelines depend on the payment channel.
+In‑app subscriptions are billed and managed by Apple App Store / Google Play. Refunds follow the store’s Terms; we cannot directly refund store orders:
 
-## 7. Contact
+- iOS (iTunes/App Store):
+  - Use Apple’s “Report a Problem”: on desktop, sign in with your Apple ID → Purchase History → locate the purchase → “Report a Problem” and select a reason.
+  - On mobile: App Store → tap your profile (top right) → Purchase History → locate the transaction → “Report a Problem”.
+- Android (Google Play):
+  - Within 48 hours of the charge: request a refund directly from Google.
+  - After 48 hours and within 10 days of the transaction date: email us with your Google Play order number (e.g., GPA.1234‑5678‑9012‑34567) and the purchasing email at [support@lilivi.com](mailto:support@lilivi.com). Subject: “Refund”.
 
-Questions about this Refund Policy: support@lilivi.com
+Notes:
+
+- Partially used subscription periods are generally non‑refundable.
+- Cancel anytime in the App Store / Google Play subscription center; cancellation takes effect at the end of the paid period. Deleting the app does not cancel a subscription.
+- Any cooling‑off/withdrawal rights provided by law or store policy will be honored.
+
+## 7. How to Request Assistance (Website or Other Cases)
+
+If you believe your case warrants an exception (e.g., erroneous duplicate charge), email [support@lilivi.com](mailto:support@lilivi.com) with your order ID, payment proof, and details. We typically review within 5–10 business days. Refund timelines depend on the payment channel.
+
+## 8. Contact
+
+Questions about this Refund Policy: [support@lilivi.com](mailto:support@lilivi.com)

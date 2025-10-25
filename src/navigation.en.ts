@@ -71,7 +71,6 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/en/privacy') },
     { text: 'Refund Policy', href: getPermalink('/en/refund') },
     { text: 'Cookie Policy', href: getPermalink('/en/cookies') },
-    { text: 'Cookie Settings', href: getPermalink('/en/cookies-settings') },
   ],
   socialLinks: [
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:support@lilivi.com' },

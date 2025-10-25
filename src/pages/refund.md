@@ -7,6 +7,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Lilivi 致力于提供清晰可预期的退款政策，以保障你的良好使用体验。请在购买前仔细阅读本政策。
 
+提示：我们当前不提供网站直连支付；App 内订阅由 Apple App Store 与 Google Play 计费与管理，退款按商店条款执行。
+
 ## 一、自动续费、升级、降级与取消
 
 - 订阅将在每个计费周期结束时自动续费；
@@ -37,8 +39,25 @@ Lilivi 致力于提供清晰可预期的退款政策，以保障你的良好使�
 
 ## 六、如何寻求协助
 
-如你认为存在例外情形（如误重复扣费），请发送邮件至 support@lilivi.com，并附上订单号、支付凭证与问题说明。我们通常在 5–10 个工作日内评估并回复；退款到账时间以支付渠道处理为准。
+如你认为存在例外情形（如误重复扣费），请发送邮件至 [support@lilivi.com](mailto:support@lilivi.com)，并附上订单号、支付凭证与问题说明。我们通常在 5–10 个工作日内评估并回复；退款到账时间以支付渠道处理为准。
 
-## 七、联系方式
+## 七、应用商店订阅（Apple / Google）退款与取消
 
-support@lilivi.com
+App 内订阅由 Apple App Store / Google Play 计费并管理，退款规则以各商店条款为准（我们无法直接为商店订单退款）：
+
+- iOS（通过 iTunes/App Store 订阅）：
+  - 打开“报告问题”页面并按提示提交：在电脑端登录 Apple ID → 购买历史 → 找到对应订单 → “报告问题”，选择理由并提交；
+  - 移动端：App Store → 点击右上角头像 → 购买记录 → 对应订单 → “报告问题”。
+- Android（通过 Google Play 订阅）：
+  - 扣费 48 小时内：可直接向 Google 提交退款申请；
+  - 超过 48 小时且自交易日起 10 天内：请提供 Google Play 订单号（形如 GPA.1234‑5678‑9012‑34567），发送邮件到 [support@lilivi.com](mailto:support@lilivi.com) 主题标注“Refund”，附上订单号与购买邮箱。
+
+说明：
+
+- 部分使用的订阅周期一般不予退款；
+- 你可随时在 App Store / Google Play 的“订阅中心”取消，取消在已付周期结束时生效；删除 App 不等于取消订阅；
+- 如法律或商店政策允许的冷静期/撤回权与例外，将按对应规则执行。
+
+## 八、联系方式
+
+[support@lilivi.com](mailto:support@lilivi.com)
