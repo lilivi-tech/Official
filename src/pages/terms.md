@@ -1,120 +1,137 @@
 ---
-title: 'Terms and Conditions'
+title: '使用条款'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
+最近更新日期：2025 年 8 月 5 日
 
-_Last updated_: January 06, 2023
+> 重要提示：未满 13 周岁（部分地区为 16 周岁）不得使用本服务；13（或 16）至 18 周岁需监护人许可。
 
-Please read these terms and conditions carefully before using Our Service.
+## 条款接受与范围
 
-## Interpretation and Definitions
+厦门哩哩唯科技有限公司（“Lilivi/我们”）向你提供网站、应用与相关服务（“服务”）。本《使用条款》（“条款”）并入《隐私协议》及站内引用的其他条款。我们可依业务/法律需要更新条款，你继续使用即视为接受；不同意请停止使用。
 
-### Interpretation
+## 版权声明
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+除非另有说明，网站上的软件与服务受版权与知识产权保护，归 Lilivi 及/或其许可方所有。未经书面许可，不得复制、转载或分发网站内容的任何部分。
 
-### Definitions
+## 软件与服务的使用
 
-For the purposes of these Terms and Conditions:
+网站上或通过网站提供的软件与服务均为 Lilivi 及/或其许可方的受保护作品。任何附带或包含许可协议的软件，须在你同意该许可协议后方可使用；否则你不得使用该软件。未经授权的复制构成侵权，情节严重的可能构成犯罪。
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+## 定义
 
-- **Country** refers to: California, United States
+“内容”指通过服务发布、生成或提供的文字、音频、图片、视频、图形与其他资料；“Lilivi 内容”指由 Lilivi 提供的内容（如滤镜、字体、模板、特效、贴纸、背景、音乐模板等）；“用户内容”指用户上传或提供并通过服务可用的内容，不含 Lilivi 内容。
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+## 资格与非商业使用
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+你应以合理、合法方式使用服务。除另有授权外，你仅可出于个人、非商业目的查看、分享、存储、使用、传输与发布内容；未经书面同意，不得转让本条款项下权利。
 
-- **Service** refers to the Website.
+## 账户注册
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+当你在网站或软件中创建账户，即表示你同意本条款及网站列示并引用的其他条款、条件、限制与要求（随时间更新并纳入本条款）。
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+## 订阅与费用
 
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
+软件并非免费提供。费用（“订阅”）以软件或网站展示为准，并可能因地域差异而不同。除非适用法律另有规定或条款另有约定，订阅一般不予退款。各方税费按适用税法各自负担。
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+我们支持信用卡、PayPal 等付款方式，并可能在部分国家/地区提供本地化支付方式。续费扣款失败时，你需及时更新支付信息以保持服务连续性。除非你在当前计费周期结束前（通常不少于 24 小时，或依平台规则）取消自动续费，否则订阅将自动续期并授权我们按当时适用价格及税费扣款。
 
-## Acknowledgment
+除非你提交充分证明材料表明在当前计费期从未使用软件与服务且我们自行判断同意，否则你不得取消当前计费期并要求退款。详情请参见《退款政策》。
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+### 取消与自动续费
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+你可随时在账单页面或应用商店订阅中心取消；取消在已付周期结束时生效。删除应用不等于取消订阅。除非法律或特别约定另有规定，已付费用不予退还，亦不对未使用时长给予定额抵扣。
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+## 虚拟商品与 AI 功能
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+我们可能就高级资源或功能（“虚拟商品”）收费。在适用条款下，我们授予你在服务内使用该等虚拟商品的有限、个人、可撤销、非排他、不可转让、不可再许可的许可。你不得转让、转售、单独分发或在违法/不当场景中使用虚拟商品；我们可依法变更、管理或移除虚拟商品。
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+AI 功能可能基于第三方模型。AI 生成内容可能不准确或不适宜；请自行评估与核实。我们对 AI 输出不作任何保证，亦不对依赖该等输出所致后果负责。不得以 AI 功能侵犯他人权益或违反法律。AI 功能适用的补充条款详见《AI 使用条款》（/ai-terms）。
 
-## Links to Other Websites
+## 限制与中断
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+我们有权自行决定是否接受订阅申请。你不得转让或分配订阅或其权益（含优惠码、数字资产等），不得用于转售、出租或共享；不得与他人共享登录凭证。网站、软件与服务可能因维护、升级或网络故障而暂时中断。
 
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+## 试用
 
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+我们可能向特定用户/伙伴提供试用或促销使用，除另有声明外，适用本条款。试用期结束后，你可选择不续用或升级为付费订阅。
 
-## Termination
+## 协议变更
 
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+我们可自行更新本条款与《隐私协议》。你在变更后继续使用，即视为接受。如不同意，请停止使用网站、软件与服务。
 
-Upon termination, Your right to use the Service will cease immediately.
+## 可接受使用与用户内容
 
-## Limitation of Liability
+你承诺不将网站、软件或服务用于任何非法或被本条款禁止之目的，包括但不限于：骚扰/冒充/威胁；侵权、诽谤、低俗或不当内容；垃圾信息；未经许可的自动化抓取；施加不合理负载；绕过访问控制；未经同意的广告或推销；恶意代码等。不得发布含赌博、暴力、歧视、露骨性内容、他人隐私与个人信息（如证件号/信用卡号/联系方式）或侵犯知识产权等内容。如你位于美国，你应确保内容不包含相关法规（如 PADFA）认定的敏感数据。
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+我们可（但无义务）为运营、合规与执法目的监控、移除或限制访问我们认为违规或不当的内容。
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+## 内容所有权与许可
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+我们不主张对你的内容享有所有权。为运营、提供、优化与推广服务之目的，你授予 Lilivi 全球范围、免版税、可再许可的非独占许可，以托管、存储、使用、复制、改编、修改、传播、展示、表演、分发并基于上述内容生成衍生作品。你声明并保证你已取得必要权利与同意。
 
-## "AS IS" and "AS AVAILABLE" Disclaimer
+Lilivi 及其许可方对服务与 Lilivi 内容享有全部权利（受知识产权法保护）。不得移除或遮盖相关权利声明。若你在用户内容中使用 Lilivi 内容，我们对 Lilivi 内容及其衍生物保留全部权利。
 
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+## 广告
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+服务内可能展示广告以支持运营。我们并非第三方商品/服务的供应方，不就其作出保证。交易前请自行核验；除法律另有规定外，我们不对因此产生的交易结果承担责任。
 
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+## 反馈
 
-## Governing Law
+你提交的反馈，授权 Lilivi 在全球范围内永久、不可撤销、可转让、可再许可、免版税地出于任何目的使用与开发。
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+## 应用许可
 
-## Disputes Resolution
+在你遵守本条款的前提下，我们授予你将应用安装在你拥有或控制的设备上的有限、免版税、非独占、不可转让、不可再许可的使用许可，仅限个人非商业用途（除非另有授权）。你不得对应用进行反向工程、分发、出租或向多用户开放其功能。
 
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+## 密码与账户访问
 
-## For European Union (EU) Users
+你需对账户项下活动负责。请妥善保管用于访问服务的设备与密码，保持账户信息准确更新。为防范盗用或欺诈，我们可对账户采取终止、暂停或冻结等措施。
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+## 赔偿
 
-## United States Legal Compliance
+因你行为/不作为、你的内容或你违反法律与本条款而引发的第三方主张，你将为 Lilivi、关联方与服务提供商及其管理人员、董事、员工与代理承担赔偿责任（含合理律师费）。
 
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+## 免责声明
 
-## Severability and Waiver
+我们无义务对用户内容进行全面监控，亦不对其准确性、完整性或合法性承担责任。我们可在任何时间以任何理由移除、编辑、屏蔽我们认为违反本条款或不当的用户内容。你可能会接触到他人发布的令人反感或不准确内容，你同意不因此向我们主张权利。对于如“色彩匹配”等功能受输入素材质量、技术限制或艺术复杂性影响的结果，我们不作准确性或充分性保证。
 
-### Severability
+## Lilivi 的终止权
 
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+我们可自行决定在无需通知的情况下终止你对软件的许可。若终止与用户违约无关，我们可按账户剩余完整月数提供按比例退款；如因违反本条款、欺诈、滥用或对我们/他人造成不利影响而终止，概不退款。
 
-### Waiver
+## 第三方与链接
 
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
+我们不对第三方的行为、内容、产品或服务负责。外链仅为便利提供，风险由你自行承担。
 
-## Translation Interpretation
+## 不可抗力
 
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
+因不可抗力或其他我们合理控制范围外的因素（如灾害、网络/系统故障、攻击等）导致的延迟或失败，我们不承担责任。
 
-## Changes to These Terms and Conditions
+## 修改、中止与终止
 
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
+我们可依法随时修改、中止或终止服务或你的访问。请自行备份数据。依其性质应当存续的条款于终止后仍然有效。
 
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
+## 通知侵权
 
-## Contact Us
+如你认为服务中的材料侵犯了你的合法权益，请联系：support@lilivi.com，并提供足够信息以便我们核查。
 
-If you have any questions about these Terms and Conditions, You can contact us:
+## 可分割、转让与完整协议
 
-- By email: somecoolemail@domain.com
+若本条款任何条款被认定无效，其余条款仍然有效。未经书面同意，你不得转让本条款项下权利义务；我们可依法转让。本条款（含引用文件）构成你与 Lilivi 就服务达成的完整协议。
+
+## 责任限制
+
+在法律允许的最大范围内，对于因网站、软件或服务引起或与之相关的任何间接、偶发、特殊、惩罚性或类似损害，我们及董事、高管、员工、代理不承担责任；我们的总责任不超过你最近一次支付的订阅费用。上述限制在终止后仍然有效。
+
+## 适用法律与争议解决
+
+本条款受中华人民共和国法律管辖（不含冲突规范）。因本条款产生的争议，优先友好协商；协商不成的，提交我们所在地有管辖权的人民法院解决。
+
+## 内在风险
+
+互联网服务存在内在风险（如软硬件/网络故障、恶意软件、数据丢失、未授权访问等）。在法律允许范围内，你自行承担相关风险。
+
+## 联系我们
+
+support@lilivi.com

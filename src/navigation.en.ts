@@ -69,6 +69,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Terms of Use', href: getPermalink('/en/terms') },
     { text: 'Privacy Policy', href: getPermalink('/en/privacy') },
+    { text: 'Refund Policy', href: getPermalink('/en/refund') },
     { text: 'Cookie Policy', href: getPermalink('/en/cookies') },
     { text: 'Cookie Settings', href: getPermalink('/en/cookies-settings') },
   ],
