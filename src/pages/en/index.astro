@@ -7,7 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+// import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
@@ -98,15 +98,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Followers', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+  <!-- Stats Widget hidden as requested -->
 
   <CallToAction actions={[{ variant: 'primary', text: 'Start your creative journey', href: '/en/products', icon: 'tabler:rocket' }]}>
     <Fragment slot="title">AI × Game × Creativity</Fragment>

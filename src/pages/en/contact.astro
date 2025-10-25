@@ -5,30 +5,34 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
-const metadata = { title: 'Contact - Lilivi', description: 'Get in touch' };
+const metadata = { title: 'Contact - Lilivi', description: 'Stay in touch: we typically reply within 24 hours. You can also email us directly at support@lilivi.com' };
 ---
 
 <PageLayout metadata={metadata} lang="en" headerOverride={headerEn} footerOverride={footerEn}>
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Stay in touch!" />
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="Our support team is happy to help you."
+    title="Leave us a message"
+    subtitle="For faster answers, check FAQs first; you can also contact us directly."
+    formName="contact-en"
+    netlify={true}
     inputs={[
       { type: 'text', name: 'name', label: 'Name' },
       { type: 'email', name: 'email', label: 'Email' },
     ]}
     textarea={{ label: 'Message' }}
-    disclaimer={{ label: 'By submitting this form you agree to our privacy policy.' }}
-    description="We typically respond within 24 business hours. Or email us directly: support@lilivi.com"
+    disclaimer={{ label: 'By submitting this form, you consent to us collecting this information for contact purposes.' }}
+    description="We typically reply within 24 hours. Or email us directly: support@lilivi.com"
   />
 
   <Features2
-    title="Other channels"
-    columns={2}
+    title="We're happy to help"
     items={[
-      { title: 'Email', description: 'support@lilivi.com', icon: 'tabler:mail' },
-      { title: 'Join us', description: 'Love AI, games and creativity? /en/join', icon: 'tabler:users' },
+      { title: 'General Support', description: 'Questions about accounts, navigation, payments, or site features.' },
+      { title: 'Business Partnerships', description: 'Purchases, customization, commercial licensing, or solution inquiries.' },
+      { title: 'Technical Support', description: 'Installation, editing, compatibility, or other technical issues.' },
+      { title: 'Email', description: 'support@lilivi.com', icon: 'tabler:headset' },
+      { title: 'Company', description: 'Xiamen Lilivi Technology Co., Ltd.', icon: 'tabler:building' },
     ]}
   />
 </PageLayout>
