@@ -56,5 +56,30 @@ import '@fontsource-variable/inter';
     --aw-color-bg-page: rgb(3 6 32);
 
     ::selection { background-color: rgba(179, 156, 255, 0.35); color: #ffffff; }
+    --aw-font-logo: 'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  }
+    /* Logo font (free & commercial): Space Grotesk */
+    --aw-font-logo: 'Space Grotesk', 'Inter Variable', system-ui, -apple-system, 'SF Pro Display', Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+  /* Logo text helper */
+  .aw-logo-text {
+    font-family: var(--aw-font-logo);
+    letter-spacing: -0.02em;
   }
 </style>
+
+<!-- Load Space Grotesk from Google Fonts (free, commercial use) -->
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+  crossorigin
+/>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
+  rel="stylesheet"
+/>

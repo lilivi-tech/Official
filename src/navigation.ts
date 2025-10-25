@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -14,7 +14,7 @@ export const headerData = {
     { text: '关于我们', href: getPermalink('/about') },
     { text: '加入我们', href: getPermalink('/join') },
     { text: '联系', href: getPermalink('/contact') },
-    { text: '博客', href: getBlogPermalink() },
+    // { text: '博客', href: getBlogPermalink() },
   ],
   actions: [],
 };
@@ -29,7 +29,7 @@ export const footerData = {
         { text: '团队', href: '#' },
         { text: '企业', href: '#' },
         { text: '客户案例', href: '#' },
-        { text: '定价', href: '#' },
+        // { text: '定价', href: '#' },
         { text: '资源', href: '#' },
       ],
     },
@@ -57,7 +57,7 @@ export const footerData = {
       title: '公司',
       links: [
         { text: '关于', href: '#' },
-        { text: '博客', href: '#' },
+        // { text: '博客', href: '#' },
         { text: '加入我们', href: '#' },
         { text: '媒体', href: '#' },
         { text: '多元与包容', href: '#' },
@@ -77,7 +77,6 @@ export const footerData = {
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `

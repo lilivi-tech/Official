@@ -1,15 +1,20 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { headerData as headerEn, footerData as footerEn } from '~/navigation.en';
 
 const metadata = {
   title: 'Lilivi — Light up life with technology',
   description: 'AI × Game × Creativity. Make technology warm and human-centered.',
+  ignoreTitleTemplate: true,
 };
 ---
 
@@ -31,48 +36,80 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <!-- Note Widget ******************* -->
+  <Note title="Brand Philosophy" description="Simple · Best Practices · High Performance · Warm Technology" />
+
+  <!-- Features Widget *************** -->
   <Features
     id="features"
     tagline="Features"
-    title="What Lilivi brings"
-    subtitle="Fast, flexible and warm experiences by design."
+    title="Lilivi's Core Advantages"
+    subtitle="AI × Game × Creativity: Lightweight, fast, customizable, warm experiences."
     items={[
-      { title: 'Astro + Tailwind', description: 'Modern SSG/hybrid with atomic CSS.', icon: 'tabler:brand-tailwind' },
-      { title: 'Ready-made components', description: 'Hero, Features, Pricing, Footer and more.', icon: 'tabler:components' },
-      { title: 'Best practices', description: 'Solid structure, SEO and accessibility.', icon: 'tabler:list-check' },
-      { title: 'Great performance', description: 'Faster pages, better UX and conversion.', icon: 'tabler:rocket' },
-      { title: 'SEO friendly', description: 'Metadata and OG optimization built in.', icon: 'tabler:arrows-right-left' },
-      { title: 'Open & collaborative', description: 'We welcome ideas and contributions.', icon: 'tabler:bulb' },
+      { title: 'AI Generation & Collaboration', description: 'Multi-model capabilities with prompts, presets, and teamwork to boost productivity.', icon: 'tabler:sparkles' },
+      { title: 'Gamified Interactions', description: 'Achievements, progress and rewards built in for fun and better conversion.', icon: 'tabler:confetti' },
+      { title: 'Ship Fast', description: 'Modular blocks and one‑click deploy: hours from idea to launch.', icon: 'tabler:rocket' },
+      { title: 'Brand Consistency', description: 'Theme variables unify color and typography across touchpoints.', icon: 'tabler:palette' },
+      { title: 'Observability & Growth', description: 'Analytics, A/B tests and events to iterate with data.', icon: 'tabler:chart-line' },
+      { title: 'Privacy & Compliance', description: 'Secure by default, GDPR/CCPA ready with cookie settings.', icon: 'tabler:shield-lock' },
     ]}
   />
 
-  <Features2
-    title="Common components"
-    subtitle="Cover most marketing/product sites"
-    tagline="Components"
+  <!-- Steps Widget ****************** -->
+  <Steps
+    title="Product Core · Stable Technical Blueprint"
     items={[
-      { title: 'Headers', description: 'Clear navigation, clear direction.', icon: 'flat-color-icons:template' },
-      { title: 'Hero', description: 'Set the first impression.', icon: 'flat-color-icons:gallery' },
-      { title: 'Features', description: 'Show your value clearly.', icon: 'flat-color-icons:approval' },
-      { title: 'Content', description: 'Content carries your message.', icon: 'flat-color-icons:document' },
-      { title: 'CTA', description: 'Guide actions and improve conversion.', icon: 'flat-color-icons:advertising' },
-      { title: 'Pricing', description: 'Clear plans, faster decisions.', icon: 'flat-color-icons:currency-exchange' },
+      {
+        title: 'Human-Centered Experience Philosophy',
+        description: 'Rooted in smart sensing and emotional feedback, with aesthetic consistency so every interaction feels understood.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Sustainable Creation Engine',
+        description: 'Modular design and high‑performance architecture built for global readiness, enabling steady creative growth.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Trusted Data & Security',
+        description: 'Privacy by design with data‑driven optimization and a robust feedback loop to earn and keep trust.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget hidden as requested -->
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="FAQs"
+    subtitle="Learn what Lilivi can do and how to get started."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      { title: 'Why Lilivi?', description: 'We blend AI and game creativity to serve real scenarios warmly.' },
+      { title: 'How to start?', description: 'Visit the product page, choose Play or Studio, and follow the guide.' },
+      { title: 'Mobile support?', description: 'Optimized mobile experience launching soon — stay tuned.' },
+      { title: 'Dark mode?', description: 'Yes. Toggle theme in the top-right corner.' },
+      { title: 'Early access?', description: 'Contact us or watch the blog for announcements.' },
     ]}
   />
 
-  <Pricing
-    title="Pricing"
-    subtitle="Pick a plan and start creating"
-    tagline="Pricing"
-    prices={[
-      { title: 'Free', subtitle: 'For personal trial', price: '0', period: '/mo', items: [ { description: 'Basic features' }, { description: 'Community support' } ], callToAction: { text: 'Get Started', href: '/en/products' } },
-      { title: 'Pro', subtitle: 'For creators/teams', price: '19', period: '/mo', items: [ { description: 'Advanced components/themes' }, { description: 'Priority email support' }, { description: 'Commercial license' } ], callToAction: { text: 'Try Now', href: '/en/products/play' }, hasRibbon: true, ribbonTitle: 'Popular' },
-      { title: 'Team', subtitle: 'For organizations', price: '99', period: '/mo', items: [ { description: 'Collaboration & permissions' }, { description: 'Priority tech support' }, { description: 'Customization consult' } ], callToAction: { text: 'Contact Us', href: '/en/contact' } },
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Followers', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
     ]}
   />
 
   <CallToAction actions={[{ variant: 'primary', text: 'Start your creative journey', href: '/en/products', icon: 'tabler:rocket' }]}>
     <Fragment slot="title">AI × Game × Creativity</Fragment>
-    <Fragment slot="subtitle">Technology should be gentle, not cold. Start now.</Fragment>
+    <Fragment slot="subtitle">Technology should be gentle, not cold. Start now and light up life.</Fragment>
   </CallToAction>
 </PageLayout>

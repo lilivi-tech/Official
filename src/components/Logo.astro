@@ -2,10 +2,10 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<div class="flex items-center ml-2 rtl:ml-0 rtl:mr-2 select-none">
+<div class="flex items-center ml-2 rtl:ml-0 rtl:mr-2 select-none motion-safe:animate-fade">
   <span
-    class="text-2xl md:text-xl font-extrabold whitespace-nowrap"
-    style="background: linear-gradient(135deg, #B39CFF, #A296D9); -webkit-background-clip: text; background-clip: text; color: transparent;"
+    class="aw-logo-text text-2xl md:text-3xl lg:text-[2.25rem] font-extrabold whitespace-nowrap"
+    style="background: linear-gradient(135deg, #B39CFF 0%, #A296D9 100%); -webkit-background-clip: text; background-clip: text; color: transparent;"
   >
     {SITE?.name || 'Lilivi'}
   </span>

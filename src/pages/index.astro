@@ -4,14 +4,12 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
 
 const metadata = {
   title: 'Lilivi — 用科技，点亮生活的温度',
@@ -58,174 +56,59 @@ const metadata = {
     subtitle="AI × Game × Creativity：轻盈、快速、可自定义，打造有温度的体验。"
     items={[
       {
-        title: 'Astro + Tailwind 一体化',
-        description: '现代静态/混合站点与原子化样式的高效组合，性能与效率兼得。',
-        icon: 'tabler:brand-tailwind',
+        title: 'AI 生成与协作',
+        description: '内置多模型能力，支持提示工程、预设与团队协作，创作效率翻倍。',
+        icon: 'tabler:sparkles',
       },
       {
-        title: '即取即用的组件',
-        description: '覆盖 Hero、功能、价格、页脚等常用模块，按需组合快速搭建。',
-        icon: 'tabler:components',
+        title: '游戏化交互',
+        description: '成就、进度与奖励机制融入流程，让产品更有趣、更高转化。',
+        icon: 'tabler:confetti',
       },
       {
-        title: '最佳实践与可维护性',
-        description: '良好结构与 SEO/可访问性实践，保障长期可迭代。',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: '卓越的加载速度',
-        description: '默认即高分的性能体验，助力更好的搜索与转化。',
+        title: '极速上线',
+        description: '模块化拼装与一键部署，从想法到发布以小时计，快速验证与增长。',
         icon: 'tabler:rocket',
       },
       {
-        title: 'SEO 友好',
-        description: '内置元数据与 OG 图优化，助力内容触达更多受众。',
-        icon: 'tabler:arrows-right-left',
+        title: '品牌一致性',
+        description: '变量与主题系统统一色彩与字体，在所有触点保持品牌调性。',
+        icon: 'tabler:palette',
       },
       {
-        title: '开放与协作',
-        description: '欢迎新想法与贡献，持续共创更好的产品体验。',
-        icon: 'tabler:bulb',
+        title: '可观测与增长',
+        description: '内置分析、A/B 实验与事件追踪，数据驱动决策，持续优化体验。',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: '隐私与合规',
+        description: '默认即安全，遵循 GDPR/CCPA，支持 Cookie 设定与匿名化分析。',
+        icon: 'tabler:shield-lock',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="产品内核"
-    title="有温度的技术蓝图"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">建立在现代化基础之上</h3>
-      采用行业领先实践，获得持久的竞争优势
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">让你的在线形象真正体现品牌气质。</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">为增长与成功而设计。</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <!-- Blueprint blocks removed as requested -->
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="用 Lilivi 快速搭建你的理想网站"
+    title="产品内核 · 有稳定的技术蓝图"
     items={[
       {
-        title: '步骤 1：<span class="font-medium">获取模板</span>',
-        description: '从 GitHub 获取或使用模板，一键开始你的创意画布。',
-        icon: 'tabler:package',
+        title: '以人为本的体验哲学',
+        description: '以智能感知与情感反馈为核心，保持美学一致性，让每一次交互都被温柔理解。',
+        icon: 'tabler:users',
       },
       {
-        title: '步骤 2：<span class="font-medium">添加内容</span>',
-        description: '填充图片与文案，让你的故事鲜活起来。',
-        icon: 'tabler:letter-case',
+        title: '可持续的创造力引擎',
+        description: '模块化与高性能架构支撑全球化适配，从容扩展，让创造力稳健生长。',
+        icon: 'tabler:rocket',
       },
       {
-        title: '步骤 3：<span class="font-medium">自定义样式</span>',
-        description: '调整颜色、字体与布局，注入你的品牌气质。',
-        icon: 'tabler:paint',
-      },
-      {
-        title: '完成！',
-        icon: 'tabler:check',
+        title: '可信赖的数据与安全体系',
+        description: '内置隐私保护与数据驱动优化，配合完善反馈机制，构筑值得信赖的产品基础。',
+        icon: 'tabler:shield-lock',
       },
     ]}
     image={{
@@ -234,73 +117,9 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features2 Widget hidden as requested -->
 
-  <Features2
-    title="常用组件"
-    subtitle="覆盖大多数官网/产品站点搭建需求"
-    tagline="组件库"
-    items={[
-      {
-        title: '页头',
-        description: '导航清晰即方向明确。',
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: '主视觉',
-        description: '第一印象决定心智锚点。',
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: '功能',
-        description: '清晰传达产品价值与能力。',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: '内容',
-        description: '内容即王道，承载价值表达。',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: '行动召唤',
-        description: '引导用户完成关键动作，提升转化。',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: '价格',
-        description: '清晰方案与权益，降低决策成本。',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: '证言',
-        description: '社会认同，建立信任与说服力。',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: '联系',
-        description: '多通道触达与反馈，建立连接。',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: '页脚',
-        description: '极简而有用的收尾与导航。',
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="阅读我们的最新文章"
-    information={`分享关于 AI、游戏与创造力的思考与实践，
-                        关注产品更新、设计理念与技术实现，为你带来灵感与方法。
-                `}
-  />
+  
 
   <!-- FAQs Widget ******************* -->
 
@@ -312,7 +131,7 @@ const metadata = {
     items={[
       { title: '为什么选择 Lilivi？', description: '我们将 AI 与游戏的创造力结合，以温暖的方式服务真实场景。' },
       { title: '如何开始？', description: '访问产品页选择 Play 或 Studio，按照指引体验与上手。' },
-      { title: '是否支持移动端？', description: '默认支持响应式布局，在主流设备上均可获得良好体验。' },
+      { title: '是否支持移动端？', description: '移动端优化即将发布，敬请期待。' },
       { title: '是否支持暗色主题？', description: '支持，右上角可切换主题。' },
       { title: '如何获取内测资格？', description: '可通过联系我们或关注博客公告获取最新信息。' },
     ]}
@@ -329,52 +148,7 @@ const metadata = {
     ]}
   />
 
-  <!-- Pricing Widget *************** -->
-  <Pricing
-    title="价格方案"
-    subtitle="灵活选择，立即开启你的创意之旅"
-    tagline="Pricing"
-    prices={[
-      {
-        title: '免费',
-        subtitle: '适合个人试用',
-        price: '0',
-        period: '/月',
-        items: [
-          { description: '基础功能与模板' },
-          { description: '社区支持' },
-          { description: '个人非商业用途' },
-        ],
-        callToAction: { text: '开始使用', href: '/products' },
-      },
-      {
-        title: '专业',
-        subtitle: '适合创作者/小团队',
-        price: '19',
-        period: '/月',
-        items: [
-          { description: '解锁高级组件与主题' },
-          { description: '优先邮件支持' },
-          { description: '商业使用授权' },
-        ],
-        callToAction: { text: '立即体验', href: '/products/play' },
-        hasRibbon: true,
-        ribbonTitle: '推荐',
-      },
-      {
-        title: '团队',
-        subtitle: '适合企业团队',
-        price: '99',
-        period: '/月',
-        items: [
-          { description: '团队协作与权限' },
-          { description: '优先级技术支持' },
-          { description: '定制化方案咨询' },
-        ],
-        callToAction: { text: '联系我们', href: '/contact' },
-      },
-    ]}
-  />
+  
 
   <!-- CallToAction Widget *********** -->
 
