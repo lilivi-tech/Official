@@ -17,243 +17,268 @@ const {
 ---
 
 <div data-form-root={formName}>
-<form name={formName} method="POST" action={action} data-netlify={netlify ? 'true' : undefined} netlify-honeypot={honeypot} data-to={mailto}>
-  <input type="hidden" name="form-name" value={formName} />
-  <input type="hidden" name="page" value={Astro.url.pathname} />
-  <input type="text" name={honeypot} class="hidden" tabindex="-1" autocomplete="off" data-honeypot />
-  {
-    inputs &&
-      inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
-          name && (
-            <div class="mb-6">
-              {label && (
-                <label for={name} class="block text-sm font-medium">
-                  {label}
-                </label>
-              )}
-              <input
-                type={type}
-                name={name}
-                id={name}
-                autocomplete={autocomplete}
-                placeholder={placeholder}
-                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                data-label={label || name}
-              />
-            </div>
-          )
-      )
-  }
+  <form
+    name={formName}
+    method="POST"
+    action={action}
+    data-netlify={netlify ? 'true' : undefined}
+    netlify-honeypot={honeypot}
+    data-to={mailto}
+  >
+    <input type="hidden" name="form-name" value={formName} />
+    <input type="hidden" name="page" value={Astro.url.pathname} />
+    <input type="text" name={honeypot} class="hidden" tabindex="-1" autocomplete="off" data-honeypot />
+    {
+      inputs &&
+        inputs.map(
+          ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
+            name && (
+              <div class="mb-6">
+                {label && (
+                  <label for={name} class="block text-sm font-medium">
+                    {label}
+                  </label>
+                )}
+                <input
+                  type={type}
+                  name={name}
+                  id={name}
+                  autocomplete={autocomplete}
+                  placeholder={placeholder}
+                  class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                  data-label={label || name}
+                />
+              </div>
+            )
+        )
+    }
 
-  {
-    textarea && (
-      <div>
-        <label for="textarea" class="block text-sm font-medium">
-          {textarea.label}
-        </label>
-        <textarea
-          id="textarea"
-          name={textarea.name ? textarea.name : 'message'}
-          rows={textarea.rows ? textarea.rows : 4}
-          placeholder={textarea.placeholder}
-          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-          data-label={textarea.label || textarea.name || 'message'}
-        />
-      </div>
-    )
-  }
-
-  {
-    disclaimer && (
-      <div class="mt-3 flex items-start">
-        <div class="flex mt-0.5">
-          <input
-            id={`disclaimer-${formName}`}
-            name="disclaimer"
-            type="checkbox"
-            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+    {
+      textarea && (
+        <div>
+          <label for="textarea" class="block text-sm font-medium">
+            {textarea.label}
+          </label>
+          <textarea
+            id="textarea"
+            name={textarea.name ? textarea.name : 'message'}
+            rows={textarea.rows ? textarea.rows : 4}
+            placeholder={textarea.placeholder}
+            class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            data-label={textarea.label || textarea.name || 'message'}
           />
         </div>
-        <div class="ml-3">
-          <label for={`disclaimer-${formName}`} class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
-          </label>
+      )
+    }
+
+    {
+      disclaimer && (
+        <div class="mt-3 flex items-start">
+          <div class="flex mt-0.5">
+            <input
+              id={`disclaimer-${formName}`}
+              name="disclaimer"
+              type="checkbox"
+              class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+          <div class="ml-3">
+            <label
+              for={`disclaimer-${formName}`}
+              class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400"
+            >
+              {disclaimer.label}
+            </label>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
 
-  {
-    button && (
-      <div class="mt-10 grid">
-        <Button variant="primary" type="submit" disabled class="opacity-30 cursor-not-allowed">
-          {button}
-        </Button>
-      </div>
-    )
-  }
+    {
+      button && (
+        <div class="mt-10 grid">
+          <Button variant="primary" type="submit" disabled class="opacity-30 cursor-not-allowed">
+            {button}
+          </Button>
+        </div>
+      )
+    }
 
-  {
-    description && (
-      <div class="mt-3 text-center">
-        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
-      </div>
-    )
-  }
-  
-  
-</form>
+    {
+      description && (
+        <div class="mt-3 text-center">
+          <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+        </div>
+      )
+    }
+  </form>
 
-{!netlify && (
   <script is:inline>
-  const formMailto = document.currentScript?.previousElementSibling?.tagName === 'FORM'
-    ? (document.currentScript.previousElementSibling as HTMLFormElement)
-    : (document.querySelector('form[name="${formName}"]') as HTMLFormElement | null);
-
-  if (formMailto) {
-    formMailto.addEventListener('submit', (e) => {
-      try {
+    const rootValidate = document.currentScript.closest('[data-form-root]');
+    const formValidate = rootValidate?.querySelector('form');
+    const submitBtn = rootValidate?.querySelector('button[type="submit"]');
+    function updateSubmitState() {
+      if (!formValidate || !submitBtn) return;
+      const fields = Array.from(
+        formValidate.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"]):not([data-honeypot])')
+      ).concat(Array.from(formValidate.querySelectorAll('textarea[name]')));
+      const allFilled = fields.every((el) => {
+        const val = Reflect.get(el, 'value');
+        return (val || '').toString().trim().length > 0;
+      });
+      const agreeEl = formValidate.querySelector('input[name="disclaimer"]');
+      const agree = agreeEl ? !!Reflect.get(agreeEl, 'checked') : true;
+      const enable = allFilled && agree;
+      submitBtn.disabled = !enable;
+      submitBtn.style.opacity = enable ? '1' : '0.3';
+      submitBtn.style.cursor = enable ? 'pointer' : 'not-allowed';
+    }
+    formValidate?.addEventListener('input', updateSubmitState);
+    formValidate?.addEventListener('change', updateSubmitState);
+    document.addEventListener('DOMContentLoaded', updateSubmitState);
+    updateSubmitState();
+    // Prevent checkbox enter key from submitting when disabled
+    formValidate?.addEventListener('keydown', (e) => {
+      // prevent submit on Enter when disabled
+      const key = Reflect.get(e, 'key');
+      const disabled = submitBtn && Reflect.get(submitBtn, 'disabled');
+      if (key === 'Enter' && disabled) {
         e.preventDefault();
-        const to = formMailto.getAttribute('data-to') || 'support@lilivi.com';
-        const name = (formMailto.querySelector('[name="name"]') as HTMLInputElement | null)?.value || '';
-        const subject = encodeURIComponent(`Lilivi Contact — ${name}`.trim());
-
-        const fields = Array.from(formMailto.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"])'))
-          .concat(Array.from(formMailto.querySelectorAll('textarea[name]')));
-
-        const lines = fields.map((el) => {
-          const input = el as HTMLInputElement | HTMLTextAreaElement;
-          const label = input.getAttribute('data-label') || input.getAttribute('name');
-          return `${label}: ${input.value}`;
-        });
-
-        const page = (formMailto.querySelector('input[name="page"]') as HTMLInputElement | null)?.value;
-        if (page) lines.push(`Page: ${page}`);
-
-        const body = encodeURIComponent(lines.join('\n'));
-        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      } catch (err) {
-        // no-op
       }
     });
-  }
   </script>
-)}
 
-<script is:inline>
-  const rootValidate = document.currentScript.closest('[data-form-root]');
-  const formValidate = rootValidate?.querySelector('form') as HTMLFormElement | null;
-  const submitBtn = rootValidate?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
-  function updateSubmitState() {
-    if (!formValidate || !submitBtn) return;
-    const fields = Array.from(
-      formValidate.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"]):not([data-honeypot])')
-    ).concat(Array.from(formValidate.querySelectorAll('textarea[name]')));
-    const allFilled = fields.every((el) => ((el as HTMLInputElement | HTMLTextAreaElement).value || '').trim().length > 0);
-    const agreeEl = formValidate.querySelector('input[name="disclaimer"]') as HTMLInputElement | null;
-    const agree = agreeEl ? agreeEl.checked : true;
-    const enable = allFilled && agree;
-    submitBtn.disabled = !enable;
-    submitBtn.style.opacity = enable ? '1' : '0.3';
-    submitBtn.style.cursor = enable ? 'pointer' : 'not-allowed';
-  }
-  formValidate?.addEventListener('input', updateSubmitState);
-  formValidate?.addEventListener('change', updateSubmitState);
-  document.addEventListener('DOMContentLoaded', updateSubmitState);
-  updateSubmitState();
-  // Prevent checkbox enter key from submitting when disabled
-  formValidate?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && submitBtn?.disabled) {
-      e.preventDefault();
+  <script is:inline>
+    const rootSubmit = document.currentScript.closest('[data-form-root]');
+    const formSubmit = rootSubmit?.querySelector('form');
+    if (formSubmit) {
+      const isNetlify = formSubmit.getAttribute('data-netlify') === 'true';
+      if (!isNetlify) {
+        formSubmit.addEventListener('submit', (e) => {
+          try {
+            e.preventDefault();
+            const to = formSubmit.getAttribute('data-to') || 'support@lilivi.com';
+            const nameEl = formSubmit.querySelector('[name="name"]');
+            const name = (nameEl && Reflect.get(nameEl, 'value')) || '';
+            const subject = encodeURIComponent(`Lilivi Contact — ${name}`.trim());
+
+            const fields = Array.from(
+              formSubmit.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"])')
+            ).concat(Array.from(formSubmit.querySelectorAll('textarea[name]')));
+
+            const lines = fields.map((el) => {
+              const label = el.getAttribute('data-label') || el.getAttribute('name');
+              const val = Reflect.get(el, 'value') || '';
+              return `${label}: ${val}`;
+            });
+
+            const pageEl = formSubmit.querySelector('input[name="page"]');
+            const page = pageEl && Reflect.get(pageEl, 'value');
+            if (page) lines.push(`Page: ${page}`);
+
+            const body = encodeURIComponent(lines.join('\n'));
+            window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+          } catch {
+            void 0;
+          }
+        });
+      }
     }
-  });
-</script>
+  </script>
 
-{netlify && (
-  <>
+  <div data-netlify-modals>
     <div id={`success-${formName}`} data-success-modal class="hidden fixed inset-0 z-50 items-center justify-center">
       <div class="absolute inset-0 bg-black/50" data-overlay></div>
-      <div class="relative mx-4 w-full max-w-md rounded-xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-black/10">
+      <div
+        class="relative mx-4 w-full max-w-md rounded-xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-black/10"
+      >
         <h3 class="text-lg font-semibold mb-1" data-title>提交成功</h3>
         <p class="text-sm text-gray-600 dark:text-gray-400" data-message>我们已收到你的信息，会在 24 小时内回复你。</p>
         <div class="mt-6 text-right">
-          <button type="button" class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white" data-close>好的</button>
+          <button type="button" class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white" data-close
+            >好的</button
+          >
         </div>
       </div>
     </div>
     <div id={`error-${formName}`} data-error-modal class="hidden fixed inset-0 z-50 items-center justify-center">
       <div class="absolute inset-0 bg-black/50" data-overlay></div>
-      <div class="relative mx-4 w-full max-w-md rounded-xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-black/10">
+      <div
+        class="relative mx-4 w-full max-w-md rounded-xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-black/10"
+      >
         <h3 class="text-lg font-semibold mb-1" data-title>提交失败</h3>
         <p class="text-sm text-gray-600 dark:text-gray-400" data-message>出了一点问题，请稍后再试。</p>
         <div class="mt-6 text-right">
-          <button type="button" class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white" data-close>好的</button>
+          <button type="button" class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-white" data-close
+            >好的</button
+          >
         </div>
       </div>
     </div>
-  <script is:inline>
-      const rootNetlify = document.currentScript.closest('[data-form-root]');
-      const formNetlify = rootNetlify?.querySelector('form') as HTMLFormElement | null;
-      const successEl = rootNetlify?.querySelector('[data-success-modal]') as HTMLElement | null;
-      const errorEl = rootNetlify?.querySelector('[data-error-modal]') as HTMLElement | null;
-      function show(el) {
-        el?.classList.remove('hidden');
-        el?.classList.add('flex');
-      }
-      function hide(el) {
-        el?.classList.add('hidden');
-        el?.classList.remove('flex');
-      }
-      function localize(el, { titleZh, msgZh, titleEn, msgEn, okZh = '好的', okEn = 'OK' }) {
-        const lang = document.documentElement.lang || 'en';
-        const title = lang.startsWith('zh') ? titleZh : titleEn;
-        const msg = lang.startsWith('zh') ? msgZh : msgEn;
-        el.querySelector('[data-title]').textContent = title;
-        el.querySelector('[data-message]').textContent = msg;
-        el.querySelector('[data-close]').textContent = lang.startsWith('zh') ? okZh : okEn;
-      }
-      if (formNetlify) {
-        formNetlify.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const formData = new FormData(formNetlify);
-          try {
-            await fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams([...formData]).toString(),
-            });
-            formNetlify.reset();
-            // Trigger state update if present
-            try { formNetlify.dispatchEvent(new Event('input', { bubbles: true })); } catch (e) {}
-            if (successEl) {
-              localize(successEl, {
-                titleZh: '提交成功',
-                msgZh: '我们已收到你的信息，会在 24 小时内回复你。',
-                titleEn: 'Message sent',
-                msgEn: 'We have received your message and will respond within 24 hours.',
-              });
-              show(successEl);
-              successEl.querySelector('[data-overlay]')?.addEventListener('click', () => hide(successEl), { once: true });
-              successEl.querySelector('[data-close]')?.addEventListener('click', () => hide(successEl), { once: true });
-            }
-          } catch (err) {
-            if (errorEl) {
-              localize(errorEl, {
-                titleZh: '提交失败',
-                msgZh: '出了一点问题，请稍后再试。',
-                titleEn: 'Something went wrong',
-                msgEn: 'Please try again later.',
-              });
-              show(errorEl);
-              errorEl.querySelector('[data-overlay]')?.addEventListener('click', () => hide(errorEl), { once: true });
-              errorEl.querySelector('[data-close]')?.addEventListener('click', () => hide(errorEl), { once: true });
-            }
-          }
-        });
-      }
-    </script>
-  </>
-)}
+  </div>
 
+  <script is:inline>
+    const rootNetlify = document.currentScript.closest('[data-form-root]');
+    const formNetlify = rootNetlify?.querySelector('form');
+    const successEl = rootNetlify?.querySelector('[data-success-modal]');
+    const errorEl = rootNetlify?.querySelector('[data-error-modal]');
+    function show(el) {
+      el?.classList.remove('hidden');
+      el?.classList.add('flex');
+    }
+    function hide(el) {
+      el?.classList.add('hidden');
+      el?.classList.remove('flex');
+    }
+    function localize(el, { titleZh, msgZh, titleEn, msgEn, okZh = '好的', okEn = 'OK' }) {
+      const lang = document.documentElement.lang || 'en';
+      const title = lang.startsWith('zh') ? titleZh : titleEn;
+      const msg = lang.startsWith('zh') ? msgZh : msgEn;
+      el.querySelector('[data-title]').textContent = title;
+      el.querySelector('[data-message]').textContent = msg;
+      el.querySelector('[data-close]').textContent = lang.startsWith('zh') ? okZh : okEn;
+    }
+    if (formNetlify && formNetlify.getAttribute('data-netlify') === 'true') {
+      formNetlify.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(formNetlify);
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams([...formData]).toString(),
+          });
+          formNetlify.reset();
+          try {
+            formNetlify.dispatchEvent(new Event('input', { bubbles: true }));
+          } catch {
+            void 0;
+          }
+          if (successEl) {
+            localize(successEl, {
+              titleZh: '提交成功',
+              msgZh: '我们已收到你的信息，会在 24 小时内回复你。',
+              titleEn: 'Message sent',
+              msgEn: 'We have received your message and will respond within 24 hours.',
+            });
+            show(successEl);
+            successEl.querySelector('[data-overlay]')?.addEventListener('click', () => hide(successEl), { once: true });
+            successEl.querySelector('[data-close]')?.addEventListener('click', () => hide(successEl), { once: true });
+          }
+        } catch {
+          if (errorEl) {
+            localize(errorEl, {
+              titleZh: '提交失败',
+              msgZh: '出了一点问题，请稍后再试。',
+              titleEn: 'Something went wrong',
+              msgEn: 'Please try again later.',
+            });
+            show(errorEl);
+            errorEl.querySelector('[data-overlay]')?.addEventListener('click', () => hide(errorEl), { once: true });
+            errorEl.querySelector('[data-close]')?.addEventListener('click', () => hide(errorEl), { once: true });
+          }
+        }
+      });
+    }
+  </script>
 </div>

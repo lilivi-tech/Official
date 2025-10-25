@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
-import Button from '~/components/ui/Button.astro';
+// import Button from '~/components/ui/Button.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash } from '~/utils/permalinks';
@@ -36,11 +36,14 @@ export interface Props {
 const {
   id = 'header',
   links = [],
+  // actions prop is supported, not used locally
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   actions = [],
   isSticky = false,
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   showRssFeed = false,
   showLanguageSwitch = false,
   position = 'center',
