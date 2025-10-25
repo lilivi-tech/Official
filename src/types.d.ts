@@ -184,11 +184,12 @@ export interface Disclaimer {
 
 // COMPONENTS
 export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'glass' | 'liquid';
   text?: string;
   icon?: string;
   classes?: Record<string, string>;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export interface ItemGrid {
@@ -212,6 +213,11 @@ export interface Form {
   disclaimer?: Disclaimer;
   button?: string;
   description?: string;
+  formName?: string;
+  mailto?: string;
+  netlify?: boolean;
+  honeypot?: string;
+  action?: string;
 }
 
 // WIDGETS

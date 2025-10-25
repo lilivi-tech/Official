@@ -106,28 +106,29 @@ const {
 </form>
 
 {!netlify && (
-  <script>
-  const form = document.currentScript?.previousElementSibling?.tagName === 'FORM'
-    ? document.currentScript.previousElementSibling
-    : document.querySelector('form[name="${formName}"]');
+  <script is:inline>
+  const formMailto = document.currentScript?.previousElementSibling?.tagName === 'FORM'
+    ? (document.currentScript.previousElementSibling as HTMLFormElement)
+    : (document.querySelector('form[name="${formName}"]') as HTMLFormElement | null);
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
+  if (formMailto) {
+    formMailto.addEventListener('submit', (e) => {
       try {
         e.preventDefault();
-        const to = form.getAttribute('data-to') || 'support@lilivi.com';
-        const name = form.querySelector('[name="name"]')?.value || '';
+        const to = formMailto.getAttribute('data-to') || 'support@lilivi.com';
+        const name = (formMailto.querySelector('[name="name"]') as HTMLInputElement | null)?.value || '';
         const subject = encodeURIComponent(`Lilivi Contact — ${name}`.trim());
 
-        const fields = Array.from(form.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"])'))
-          .concat(Array.from(form.querySelectorAll('textarea[name]')));
+        const fields = Array.from(formMailto.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"])'))
+          .concat(Array.from(formMailto.querySelectorAll('textarea[name]')));
 
         const lines = fields.map((el) => {
-          const label = el.getAttribute('data-label') || el.getAttribute('name');
-          return `${label}: ${el.value}`;
+          const input = el as HTMLInputElement | HTMLTextAreaElement;
+          const label = input.getAttribute('data-label') || input.getAttribute('name');
+          return `${label}: ${input.value}`;
         });
 
-        const page = form.querySelector('input[name="page"]')?.value;
+        const page = (formMailto.querySelector('input[name="page"]') as HTMLInputElement | null)?.value;
         if (page) lines.push(`Page: ${page}`);
 
         const body = encodeURIComponent(lines.join('\n'));
@@ -141,28 +142,28 @@ const {
 )}
 
 <script is:inline>
-  const root = document.currentScript.closest('[data-form-root]');
-  const form = root?.querySelector('form');
-  const submitBtn = root?.querySelector('button[type="submit"]');
+  const rootValidate = document.currentScript.closest('[data-form-root]');
+  const formValidate = rootValidate?.querySelector('form') as HTMLFormElement | null;
+  const submitBtn = rootValidate?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
   function updateSubmitState() {
-    if (!form || !submitBtn) return;
+    if (!formValidate || !submitBtn) return;
     const fields = Array.from(
-      form.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"]):not([data-honeypot])')
-    ).concat(Array.from(form.querySelectorAll('textarea[name]')));
-    const allFilled = fields.every((el) => (el.value || '').trim().length > 0);
-    const agreeEl = form.querySelector('input[name="disclaimer"]');
+      formValidate.querySelectorAll('input[name]:not([type="hidden"]):not([type="checkbox"]):not([data-honeypot])')
+    ).concat(Array.from(formValidate.querySelectorAll('textarea[name]')));
+    const allFilled = fields.every((el) => ((el as HTMLInputElement | HTMLTextAreaElement).value || '').trim().length > 0);
+    const agreeEl = formValidate.querySelector('input[name="disclaimer"]') as HTMLInputElement | null;
     const agree = agreeEl ? agreeEl.checked : true;
     const enable = allFilled && agree;
     submitBtn.disabled = !enable;
     submitBtn.style.opacity = enable ? '1' : '0.3';
     submitBtn.style.cursor = enable ? 'pointer' : 'not-allowed';
   }
-  form?.addEventListener('input', updateSubmitState);
-  form?.addEventListener('change', updateSubmitState);
+  formValidate?.addEventListener('input', updateSubmitState);
+  formValidate?.addEventListener('change', updateSubmitState);
   document.addEventListener('DOMContentLoaded', updateSubmitState);
   updateSubmitState();
   // Prevent checkbox enter key from submitting when disabled
-  form?.addEventListener('keydown', (e) => {
+  formValidate?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && submitBtn?.disabled) {
       e.preventDefault();
     }
@@ -192,10 +193,10 @@ const {
       </div>
     </div>
   <script is:inline>
-      const root = document.currentScript.closest('[data-form-root]');
-      const form = root?.querySelector('form');
-      const successEl = root?.querySelector('[data-success-modal]');
-      const errorEl = root?.querySelector('[data-error-modal]');
+      const rootNetlify = document.currentScript.closest('[data-form-root]');
+      const formNetlify = rootNetlify?.querySelector('form') as HTMLFormElement | null;
+      const successEl = rootNetlify?.querySelector('[data-success-modal]') as HTMLElement | null;
+      const errorEl = rootNetlify?.querySelector('[data-error-modal]') as HTMLElement | null;
       function show(el) {
         el?.classList.remove('hidden');
         el?.classList.add('flex');
@@ -212,19 +213,19 @@ const {
         el.querySelector('[data-message]').textContent = msg;
         el.querySelector('[data-close]').textContent = lang.startsWith('zh') ? okZh : okEn;
       }
-      if (form) {
-        form.addEventListener('submit', async (e) => {
+      if (formNetlify) {
+        formNetlify.addEventListener('submit', async (e) => {
           e.preventDefault();
-          const formData = new FormData(form);
+          const formData = new FormData(formNetlify);
           try {
             await fetch('/', {
               method: 'POST',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               body: new URLSearchParams([...formData]).toString(),
             });
-            form.reset();
+            formNetlify.reset();
             // Trigger state update if present
-            try { form.dispatchEvent(new Event('input', { bubbles: true })); } catch (e) {}
+            try { formNetlify.dispatchEvent(new Event('input', { bubbles: true })); } catch (e) {}
             if (successEl) {
               localize(successEl, {
                 titleZh: '提交成功',
