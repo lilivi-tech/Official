@@ -67,10 +67,13 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: '条款', href: getPermalink('/terms') },
+    { text: '使用条款', href: getPermalink('/terms') },
     { text: '隐私政策', href: getPermalink('/privacy') },
+    { text: 'Cookie 政策', href: getPermalink('/cookies') },
+    { text: 'Cookie 设定', href: getPermalink('/cookies-settings') },
   ],
   socialLinks: [
+    { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:support@lilivi.com' },
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
@@ -78,9 +81,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Copyright © 2025 Xiamen Lilivi Technology Co., Ltd. All rights reserved.
-    <a class="underline ml-2" href="/privacy">Privacy Policy</a> ｜
-    <a class="underline" href="/terms">Terms of Use</a> |
-    <a class="underline" href="/contact">联系</a>
+    © 2025 Xiamen Lilivi Technology Co., Ltd.
   `,
 };
